@@ -4,6 +4,7 @@ import LastProducts from '../../Components/LastProducts/LastProducts'
 import CategoryBaner from '../../Components/CategoryBaner/CategoryBaner'
 import Categories from '../../Components/Categories/Categories'
 import BestSelling from '../../Components/BestSelling/BestSelling'
+import LastBlogs from '../../Components/LastBlogs/LastBlogs'
 
 export default function Home() {
 
@@ -60,6 +61,7 @@ export default function Home() {
                 <CategoryBaner />
                 <Categories />
                 <BestSelling />
+                <LastBlogs />
 
             </main>
         </>
