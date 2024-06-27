@@ -872,6 +872,14 @@ table tbody tr:not(:first-child):is(.dark *) {
   margin-bottom: 1rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-1\.5 {
+  margin-top: 0.375rem;
+}
+
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -1053,6 +1061,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .w-px {
   width: 1px;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .min-w-28 {
@@ -1531,6 +1543,11 @@ table tbody tr:not(:first-child):is(.dark *) {
 .text-2xl\/6 {
   font-size: 1.5rem;
   line-height: 1.5rem;
+}
+
+.text-sm\/4 {
+  font-size: 0.875rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -2032,6 +2049,14 @@ table tbody tr:not(:first-child):is(.dark *) {
     margin-bottom: 1.75rem;
   }
 
+  .md\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
+  .md\:mt-2\.5 {
+    margin-top: 0.625rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2162,6 +2187,11 @@ table tbody tr:not(:first-child):is(.dark *) {
   .md\:text-4xl\/6 {
     font-size: 2.25rem;
     line-height: 1.5rem;
+  }
+
+  .md\:text-xl\/5 {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
