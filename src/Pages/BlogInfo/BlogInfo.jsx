@@ -3,6 +3,7 @@ import TitlePage from '../../Components/TitlePage/TitlePage'
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 import Breadcrumb from '../../Components/Breadcrumb/Breadcrumb'
+import "./BlogInfo.css"
 
 export default function BlogInfo() {
     return (
