@@ -1,4 +1,5 @@
 import AboutUs from "./Pages/AboutUs/AboutUs";
+import BlogInfo from "./Pages/BlogInfo/BlogInfo";
 import Blogs from "./Pages/Blogs/Blogs";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import Home from "./Pages/Home/Home";
@@ -14,6 +15,8 @@ const routes = [
     {path: "/contact-us", element: <ContactUs />},
     {path: "/login", element: <Login />},
     {path: "/register", element: <Register />},
+    {path: "/register", element: <Register />},
+    {path: "/blog/:shortName", element: <BlogInfo />},
 ]
 
 export default routes
