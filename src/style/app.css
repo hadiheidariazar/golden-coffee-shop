@@ -978,6 +978,14 @@ table tbody tr:not(:first-child):is(.dark *) {
   margin-top: auto;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -2083,6 +2091,11 @@ table tbody tr:not(:first-child):is(.dark *) {
   line-height: 1rem;
 }
 
+.text-sm\/5 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2316,6 +2329,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 .hover\:bg-teal-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(15 118 110 / var(--tw-bg-opacity));
+}
+
+.hover\:font-bold:hover {
+  font-weight: 700;
 }
 
 .hover\:text-orange-300:hover {
@@ -2651,6 +2668,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     margin-bottom: 0.75rem;
   }
 
+  .xs\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .xs\:aspect-\[2\/1\] {
     aspect-ratio: 2/1;
   }
@@ -2815,6 +2836,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .sm\:mt-3 {
     margin-top: 0.75rem;
+  }
+
+  .sm\:mt-12 {
+    margin-top: 3rem;
   }
 
   .sm\:line-clamp-3 {

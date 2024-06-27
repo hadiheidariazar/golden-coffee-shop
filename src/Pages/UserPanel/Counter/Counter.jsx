@@ -33,6 +33,20 @@ export default function Counter() {
 
                         </CounterBox>
                     </div>
+                    <p className='mt-6 xs:mt-10 sm:mt-12 md:mt-16 text-sm/5 xs:text-base'>
+                        از طریق پیشخوان حساب کاربری‌تان، می‌توانید محصول هایی که سفارش دادید را مشاهده کنید و اگر مشکلی یا سوالی هم داشتید تیکت ارسال کنید و آنها را مدیریت کنید و جزییات حساب کاربری و کلمه عبور خود را ویرایش کنید.
+                    </p>
+                    <div className='mt-8 xs:mt-10'>
+                        <p className='text-sm/4'>
+                            سلام
+                            <span className='font-dana-bold tracking-tight text-base'> هادی حیدری آذر </span>
+                            (
+                            <span className='font-dana-bold tracking-tight text-base'> هادی حیدری آذر </span>
+                            نیستید؟
+                            <span className='cursor-pointer hover:font-bold transition-all'> خارج شوید </span>
+                            )
+                        </p>
+                    </div>
                 </div>
             </section>
         </>
