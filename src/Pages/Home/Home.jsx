@@ -6,6 +6,7 @@ import Categories from '../../Components/Categories/Categories'
 import BestSelling from '../../Components/BestSelling/BestSelling'
 import LastBlogs from '../../Components/LastBlogs/LastBlogs'
 import Services from '../../Components/Services/Services'
+import Footer from '../../Components/Footer/Footer'
 
 export default function Home() {
 
@@ -66,6 +67,8 @@ export default function Home() {
                 <Services />
 
             </main>
+
+            <Footer />
         </>
     )
 }
