@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import Header from '../../Components/Header/Header'
 import LastProducts from '../../Components/LastProducts/LastProducts'
+import CategoryBaner from '../../Components/CategoryBaner/CategoryBaner'
 
 export default function Home() {
 
@@ -54,6 +55,7 @@ export default function Home() {
                 <div ref={lastProductsRef}>
                     <LastProducts />
                 </div>
+                <CategoryBaner />
 
             </main>
         </>
