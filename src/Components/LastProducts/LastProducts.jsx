@@ -54,7 +54,7 @@ export default function LastProducts() {
                         </div>
                         <div className="flex justify-between items-center mt-3">
                             <button
-                                className="appearance-none bg-gray-200/80 dark:bg-zinc-800 text-gray-500 dark:text-gray-400 hover:bg-teal-600 hover:text-white hover:dark:bg-teal-500 hover:dark:text-white p-2 rounded-full transition-colors">
+                                className="appearance-none bg-gray-200/80 dark:bg-zinc-800 text-gray-500 dark:text-gray-400 p-2 rounded-full transition-colors cursor-default">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 md:w-[20px] h-4 md:h-[20px]">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                                 </svg>
