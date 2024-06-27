@@ -17,6 +17,7 @@ const routes = [
     {path: "/register", element: <Register />},
     {path: "/register", element: <Register />},
     {path: "/blog/:shortName", element: <BlogInfo />},
+    {path: "/category/:shortName", element: <Shop />},
 ]
 
 export default routes
