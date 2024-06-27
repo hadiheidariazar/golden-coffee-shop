@@ -913,6 +913,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   margin-top: 3rem;
 }
 
+.mt-9 {
+  margin-top: 2.25rem;
+}
+
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -1049,6 +1053,14 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .h-60 {
   height: 15rem;
+}
+
+.h-0 {
+  height: 0px;
+}
+
+.h-0\.5 {
+  height: 0.125rem;
 }
 
 .max-h-96 {
@@ -1814,6 +1826,11 @@ table tbody tr:not(:first-child):is(.dark *) {
   font-size: 13px;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1926,6 +1943,11 @@ table tbody tr:not(:first-child):is(.dark *) {
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.text-zinc-900 {
+  --tw-text-opacity: 1;
+  color: rgb(24 24 27 / var(--tw-text-opacity));
 }
 
 .line-through {
@@ -2139,6 +2161,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
+.dark\:bg-white\/20:is(.dark *) {
+  background-color: rgb(255 255 255 / 0.2);
+}
+
 .dark\:font-normal:is(.dark *) {
   font-weight: 400;
 }
@@ -2346,6 +2372,11 @@ table tbody tr:not(:first-child):is(.dark *) {
   .xs\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .xs\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
