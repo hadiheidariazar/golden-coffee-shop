@@ -852,6 +852,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   margin-top: 0.125rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -880,6 +884,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .inline-flex {
   display: inline-flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .hidden {
@@ -940,6 +948,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-11 {
+  height: 2.75rem;
 }
 
 .max-h-96 {
@@ -1066,6 +1078,10 @@ table tbody tr:not(:first-child):is(.dark *) {
           appearance: none;
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1088,6 +1104,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-x-1 {
@@ -1355,6 +1375,18 @@ table tbody tr:not(:first-child):is(.dark *) {
   padding-top: 1.75rem;
 }
 
+.pl-1 {
+  padding-left: 0.25rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
 .font-dana {
   font-family: Dana;
 }
@@ -1449,6 +1481,11 @@ table tbody tr:not(:first-child):is(.dark *) {
 .text-xs\/3 {
   font-size: 0.75rem;
   line-height: .75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold {
@@ -1600,6 +1637,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 .hover\:bg-teal-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(15 118 110 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-orange-300\/35:hover {
+  background-color: rgb(253 186 116 / 0.35);
 }
 
 .hover\:text-orange-400:hover {
@@ -1767,6 +1808,11 @@ table tbody tr:not(:first-child):is(.dark *) {
   color: rgb(39 39 42 / var(--tw-text-opacity));
 }
 
+.dark\:text-red-500:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 .hover\:dark\:bg-teal-500:is(.dark *):hover {
   --tw-bg-opacity: 1;
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
@@ -1775,6 +1821,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 .hover\:dark\:bg-zinc-600:is(.dark *):hover {
   --tw-bg-opacity: 1;
   background-color: rgb(82 82 91 / var(--tw-bg-opacity));
+}
+
+.hover\:dark\:bg-orange-300\/20:is(.dark *):hover {
+  background-color: rgb(253 186 116 / 0.2);
 }
 
 .dark\:hover\:text-orange-300:hover:is(.dark *) {
@@ -1824,12 +1874,24 @@ table tbody tr:not(:first-child):is(.dark *) {
     height: auto;
   }
 
+  .xs\:h-5 {
+    height: 1.25rem;
+  }
+
   .xs\:w-80 {
     width: 20rem;
   }
 
+  .xs\:w-5 {
+    width: 1.25rem;
+  }
+
   .xs\:max-w-52 {
     max-width: 13rem;
+  }
+
+  .xs\:gap-3 {
+    gap: 0.75rem;
   }
 
   .xs\:px-2 {
@@ -1876,6 +1938,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 @media (min-width: 640px) {
   .sm\:max-w-64 {
     max-width: 16rem;
+  }
+
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -1933,6 +1999,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     height: 20px;
   }
 
+  .md\:h-4 {
+    height: 1rem;
+  }
+
   .md\:min-h-screen {
     min-height: 100vh;
   }
@@ -1945,8 +2015,26 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: auto;
   }
 
+  .md\:w-4 {
+    width: 1rem;
+  }
+
   .md\:max-w-\[420px\] {
     max-width: 420px;
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
+  .md\:gap-x-0 {
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
+
+  .md\:gap-x-0\.5 {
+    -moz-column-gap: 0.125rem;
+         column-gap: 0.125rem;
   }
 
   .md\:bg-home-desktop {
@@ -1955,6 +2043,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .md\:p-5 {
     padding: 1.25rem;
+  }
+
+  .md\:pt-20 {
+    padding-top: 5rem;
   }
 
   .md\:text-4xl\/\[64px\] {
@@ -2041,9 +2133,18 @@ table tbody tr:not(:first-child):is(.dark *) {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
   }
+
+  .ipad\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .lg\:gap-x-5 {
     -moz-column-gap: 1.25rem;
          column-gap: 1.25rem;
@@ -2052,5 +2153,9 @@ table tbody tr:not(:first-child):is(.dark *) {
   .lg\:gap-x-7 {
     -moz-column-gap: 1.75rem;
          column-gap: 1.75rem;
+  }
+
+  .lg\:pt-36 {
+    padding-top: 9rem;
   }
 }

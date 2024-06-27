@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Header from '../../Components/Header/Header'
+import LastProducts from '../../Components/LastProducts/LastProducts'
 
 export default function Home() {
+
+    const lastProductsRef = useRef()
+
+    const scrollToLastProductsSection = () => {
+        let lastProductsSectionSpaceTop = lastProductsRef.current.firstChild.offsetTop
+        window.scrollTo({top: lastProductsSectionSpaceTop, behavior: 'smooth'})
+    }
 
     return (
         <>
@@ -35,13 +43,18 @@ export default function Home() {
                     </svg>
 
                     <div
-                        className="hidden absolute md:flex items-center justify-center w-[30px] h-[30px] mx-auto bottom-0 right-0 left-0 border-2 border-orange-300 rounded-full translate-y-2/4 cursor-pointer" >
+                        className="hidden absolute md:flex items-center justify-center w-[30px] h-[30px] mx-auto bottom-0 right-0 left-0 border-2 border-orange-300 rounded-full translate-y-2/4 cursor-pointer" onClick={scrollToLastProductsSection}>
                         <svg className="w-4 h-4 text-zinc-700 dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                             stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                         </svg>
                     </div>
                 </section>
+
+                <div ref={lastProductsRef}>
+                    <LastProducts />
+                </div>
+
             </main>
         </>
     )
