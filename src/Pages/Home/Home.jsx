@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import Header from '../../Components/Header/Header'
 import LastProducts from '../../Components/LastProducts/LastProducts'
 import CategoryBaner from '../../Components/CategoryBaner/CategoryBaner'
+import Categories from '../../Components/Categories/Categories'
 
 export default function Home() {
 
@@ -56,6 +57,7 @@ export default function Home() {
                     <LastProducts />
                 </div>
                 <CategoryBaner />
+                <Categories />
 
             </main>
         </>
