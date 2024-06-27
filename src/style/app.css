@@ -829,6 +829,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   top: 61%;
 }
 
+.top-\[46\%\] {
+  top: 46%;
+}
+
 .z-20 {
   z-index: 20;
 }
