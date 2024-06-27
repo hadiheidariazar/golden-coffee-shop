@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 export default function ContactUs() {
 
     const showAlert = () => {
-        Swal.fire({g
+        Swal.fire({
             text: 'درخواست شما با موفقیت ارسال شد',
             icon: 'success',
             confirmButtonText: 'متوجه شدم!'
