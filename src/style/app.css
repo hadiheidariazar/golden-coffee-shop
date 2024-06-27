@@ -888,6 +888,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   margin-bottom: 3rem;
 }
 
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -1609,6 +1613,11 @@ table tbody tr:not(:first-child):is(.dark *) {
   line-height: .75rem;
 }
 
+.text-xs\/4 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1711,6 +1720,11 @@ table tbody tr:not(:first-child):is(.dark *) {
 .text-zinc-700 {
   --tw-text-opacity: 1;
   color: rgb(63 63 70 / var(--tw-text-opacity));
+}
+
+.text-zinc-800 {
+  --tw-text-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity));
 }
 
 .line-through {
@@ -2404,6 +2418,16 @@ table tbody tr:not(:first-child):is(.dark *) {
   .md\:text-xl\/6 {
     font-size: 1.25rem;
     line-height: 1.5rem;
+  }
+
+  .md\:text-lg\/5 {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+
+  .md\:text-sm\/4 {
+    font-size: 0.875rem;
+    line-height: 1rem;
   }
 }
 
