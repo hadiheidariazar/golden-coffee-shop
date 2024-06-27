@@ -117,7 +117,7 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-              <span className="cursor-pointer toggle-theme" onClick={toggleTheme}>
+              <span className="cursor-pointer toggle-theme">
                 <svg className="block dark:hidden w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                   stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round"
@@ -294,7 +294,7 @@ export default function Header() {
               <span className='line-clamp-1'>ورود | ثبت نام</span>
             </a>
             <br />
-            <span className="inline-flex gap-x-2 items-center toggle-theme" onClick={toggleTheme}>
+            <span className="inline-flex gap-x-2 items-center toggle-theme">
               <svg className="block dark:hidden w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                 stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round"
