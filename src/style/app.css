@@ -1705,6 +1705,24 @@ table tbody tr:not(:first-child):is(.dark *) {
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
+.bg-emerald-300\/50 {
+  background-color: rgb(110 231 183 / 0.5);
+}
+
+.bg-emerald-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
+}
+
+.bg-sky-300\/50 {
+  background-color: rgb(125 211 252 / 0.5);
+}
+
+.bg-sky-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
+}
+
 .bg-blog-header {
   background-image: url('/images/slides/2.jpg');
 }
@@ -2661,6 +2679,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     height: 47px;
   }
 
+  .xs\:h-9 {
+    height: 2.25rem;
+  }
+
   .xs\:w-5 {
     width: 1.25rem;
   }
@@ -2679,6 +2701,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .xs\:w-\[47px\] {
     width: 47px;
+  }
+
+  .xs\:w-9 {
+    width: 2.25rem;
   }
 
   .xs\:max-w-52 {
