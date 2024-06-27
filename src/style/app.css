@@ -981,6 +981,14 @@ table tbody tr:not(:first-child):is(.dark *) {
   margin-top: auto;
 }
 
+.me-1 {
+  margin-inline-end: 0.25rem;
+}
+
+.ms-1 {
+  margin-inline-start: 0.25rem;
+}
+
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -1464,6 +1472,12 @@ table tbody tr:not(:first-child):is(.dark *) {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -1477,6 +1491,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .overflow-auto {
   overflow: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
 }
 
 .overflow-y-auto {
@@ -1770,6 +1788,11 @@ table tbody tr:not(:first-child):is(.dark *) {
   padding-bottom: 2rem;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1970,8 +1993,17 @@ table tbody tr:not(:first-child):is(.dark *) {
   line-height: 1.25rem;
 }
 
+.text-sm\/\[18px\] {
+  font-size: 0.875rem;
+  line-height: 18px;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .leading-\[56px\] {
@@ -2279,6 +2311,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .child\:tracking-tightest > * {
   letter-spacing: -0.065em;
+}
+
+.child\:tracking-tighter > * {
+  letter-spacing: -0.05em;
 }
 
 .child\:transition-all > * {
@@ -3174,4 +3210,9 @@ table tbody tr:not(:first-child):is(.dark *) {
   .xl\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
+}
+
+.rtl\:rotate-180:where([dir="rtl"], [dir="rtl"] *) {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
