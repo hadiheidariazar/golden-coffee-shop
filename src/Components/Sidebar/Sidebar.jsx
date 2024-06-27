@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 export default function Sidebar({ setShow }) {
 
@@ -28,6 +29,14 @@ export default function Sidebar({ setShow }) {
             homePage.current.classList.remove('text-white')
         }
     }, [])
+
+    const showAlert = () => {
+        Swal.fire({
+            text: 'شما با موفقیت از حساب کاربری خود خارج شدید',
+            icon: 'success',
+            confirmButtonText: 'متوجه شدم!'
+        })
+    }
 
     return (
         <ul className="space-y-2 ipad:space-y-5 pb-3">
@@ -81,7 +90,7 @@ export default function Sidebar({ setShow }) {
                 </a>
             </li>
             <li>
-                <button className="flex items-center p-3 w-full rounded hover:bg-orange-400 hover:text-white transition-colors text-base">
+                <button className="flex items-center p-3 w-full rounded hover:bg-orange-400 hover:text-white transition-colors text-base" onClick={showAlert}>
                     <svg stroke="currentColor" fill="currentColor" strokeWidth="0" version="1.1" viewBox="0 0 16 16" className="w-4 h-4 ml-1.5" xmlns="http://www.w3.org/2000/svg"><path d="M12 10v-2h-5v-2h5v-2l3 3zM11 9v4h-5v3l-6-3v-13h11v5h-1v-4h-8l4 2v9h4v-3z"></path></svg>
 
                     خروج
