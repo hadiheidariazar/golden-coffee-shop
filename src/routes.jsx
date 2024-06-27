@@ -6,6 +6,7 @@ import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Shop from "./Pages/Shop/Shop";
+import Counter from "./Pages/UserPanel/Counter/Counter";
 import UserPanel from "./Pages/UserPanel/Index";
 
 const routes = [
@@ -19,7 +20,9 @@ const routes = [
     {path: "/register", element: <Register />},
     {path: "/blog/:shortName", element: <BlogInfo />},
     {path: "/category/:shortName", element: <Shop />},
-    {path: "/my-account/*", element: <UserPanel />},
+    {path: "/my-account/*", element: <UserPanel />, children: [
+        {path: "", element: <Counter />}
+    ]},
 ]
 
 export default routes
