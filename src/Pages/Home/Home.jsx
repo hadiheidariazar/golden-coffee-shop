@@ -5,6 +5,7 @@ import CategoryBaner from '../../Components/CategoryBaner/CategoryBaner'
 import Categories from '../../Components/Categories/Categories'
 import BestSelling from '../../Components/BestSelling/BestSelling'
 import LastBlogs from '../../Components/LastBlogs/LastBlogs'
+import Services from '../../Components/Services/Services'
 
 export default function Home() {
 
@@ -62,6 +63,7 @@ export default function Home() {
                 <Categories />
                 <BestSelling />
                 <LastBlogs />
+                <Services />
 
             </main>
         </>

@@ -1095,6 +1095,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   width: 9rem;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
 .min-w-28 {
   min-width: 7rem;
 }
@@ -1228,6 +1232,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 .gap-x-0\.5 {
   -moz-column-gap: 0.125rem;
        column-gap: 0.125rem;
+}
+
+.gap-y-10 {
+  row-gap: 2.5rem;
 }
 
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
@@ -1869,6 +1877,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   display: block;
 }
 
+.dark\:inline-block:is(.dark *) {
+  display: inline-block;
+}
+
 .dark\:hidden:is(.dark *) {
   display: none;
 }
@@ -2133,12 +2145,20 @@ table tbody tr:not(:first-child):is(.dark *) {
     height: 100%;
   }
 
+  .sm\:h-\[70px\] {
+    height: 70px;
+  }
+
   .sm\:w-auto {
     width: auto;
   }
 
   .sm\:w-px {
     width: 1px;
+  }
+
+  .sm\:w-\[70px\] {
+    width: 70px;
   }
 
   .sm\:max-w-64 {
@@ -2169,6 +2189,11 @@ table tbody tr:not(:first-child):is(.dark *) {
   .sm\:gap-x-0 {
     -moz-column-gap: 0px;
          column-gap: 0px;
+  }
+
+  .sm\:gap-x-2 {
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
   }
 
   .sm\:rounded-xl {
@@ -2248,6 +2273,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .md\:mb-28 {
     margin-bottom: 7rem;
+  }
+
+  .md\:mb-36 {
+    margin-bottom: 9rem;
   }
 
   .md\:block {
