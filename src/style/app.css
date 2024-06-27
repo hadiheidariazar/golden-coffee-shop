@@ -1546,6 +1546,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   background-image: url('/images/slides/3.jpg');
 }
 
+.bg-blog-header {
+  background-image: url('/images/slides/2.jpg');
+}
+
 .from-orange-300 {
   --tw-gradient-from: #fdba74 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(253 186 116 / 0) var(--tw-gradient-to-position);
@@ -1566,6 +1570,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .bg-\[left_top\] {
   background-position: left top;
+}
+
+.bg-\[right_top\] {
+  background-position: right top;
 }
 
 .bg-no-repeat {
