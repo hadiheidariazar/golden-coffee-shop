@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import TitlePage from '../../Components/TitlePage/TitlePage'
-import Modal from '../../Components/Modal/Modal'
+import TitlePage from '../../../Components/TitlePage/TitlePage'
+import Modal from '../../../Components/Modal/Modal'
 import Swal from 'sweetalert2'
 
 export default function AccountDetails() {

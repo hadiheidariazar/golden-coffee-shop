@@ -1,5 +1,4 @@
 import AboutUs from "./Pages/AboutUs/AboutUs";
-import AccountDetails from "./Pages/AccountDetails/AccountDetails";
 import BlogInfo from "./Pages/BlogInfo/BlogInfo";
 import Blogs from "./Pages/Blogs/Blogs";
 import ContactUs from "./Pages/ContactUs/ContactUs";
@@ -7,8 +6,10 @@ import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Shop from "./Pages/Shop/Shop";
+import AccountDetails from "./Pages/UserPanel/AccountDetails/AccountDetails";
 import Counter from "./Pages/UserPanel/Counter/Counter";
 import UserPanel from "./Pages/UserPanel/Index";
+import Orders from "./Pages/UserPanel/Orders/Orders";
 
 const routes = [
     {path: "/", element: <Home />},
@@ -23,6 +24,7 @@ const routes = [
     {path: "/category/:shortName", element: <Shop />},
     {path: "/my-account/*", element: <UserPanel />, children: [
         {path: "", element: <Counter />},
+        {path: "orders", element: <Orders />},
         {path: "details", element: <AccountDetails />},
     ]},
 ]
