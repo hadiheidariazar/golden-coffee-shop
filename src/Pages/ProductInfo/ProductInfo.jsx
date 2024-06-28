@@ -15,10 +15,12 @@ import 'swiper/css/thumbs';
 
 // import required modules
 import { Zoom, FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import Modal from '../../Components/Modal/Modal'
 
 export default function ProductInfo() {
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [showReplyCommentModal, setShowReplyCommentModal] = useState(false);
 
     const showAddToCartAlert = () => {
         Swal.fire({
@@ -30,7 +32,15 @@ export default function ProductInfo() {
 
     const showAddCommentAlert = () => {
         Swal.fire({
-            text: 'دیدگاه شما با موفقیت ثبت شد شد',
+            text: 'دیدگاه شما با موفقیت ثبت شد',
+            icon: 'success',
+            confirmButtonText: 'متوجه شدم!'
+        })
+    }
+
+    const showAddReplyToCommentAlert = () => {
+        Swal.fire({
+            text: 'پاسخ شما به دیدگاه مورد نظر با موفقیت ثبت شد',
             icon: 'success',
             confirmButtonText: 'متوجه شدم!'
         })
@@ -270,7 +280,25 @@ export default function ProductInfo() {
                                     ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم. می‌پنداریم که نظر مردم ایران و منطقه باید نسبت به کالای ایرانی بهبود یابد و در این راستا با اشتیاق می‌کوشیم.
                                 </p>
 
-                                <div className="reply-container"></div>
+                                <div className="reply-container">
+                                    <div className='reply-comment bg-gray-100 dark:bg-zinc-500/60 mx-0 xs:mx-10 mt-8 p-4 xs:p-5 border-2 border-dashed border-gray-500 rounded-lg'>
+                                        <div className='flex items-center gap-x-1.5 xs:gap-x-4'>
+                                            <img loading="lazy" src="/images/avatars/avatar12.png" alt="User Profile" className='rounded-full w-11 h-11 xs:w-14 xs:h-14' />
+                                            <div>
+                                                <p className='font-dana-bold text-zinc-800 text-base dark:text-white w-max max-w-44 line-clamp-1'> فاطمه محمدی </p>
+                                                <p className='text-[11px] xs:text-xs mt-1 font-bold text-zinc-500 dark:text-zinc-300'> 1402/12/25 </p>
+                                            </div>
+                                        </div>
+                                        <div className='reply-content mt-5'>
+                                            <p className='text-sm xs:text-base'>
+                                                سلام
+                                                <br />
+                                                ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم. می‌پنداریم که نظر مردم ایران و منطقه باید نسبت به کالای ایرانی بهبود یابد و در این راستا با اشتیاق می‌کوشیم.
+                                                ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم. می‌پنداریم که نظر مردم ایران و منطقه باید نسبت به کالای ایرانی بهبود یابد و در این راستا با اشتیاق می‌کوشیم.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="flex flex-col gap-y-4 bg-white dark:bg-zinc-700 border-2 border-dashed border-gray-500 p-4 xs:p-5 rounded-lg mt-5 dark:text-white">
@@ -314,7 +342,7 @@ export default function ProductInfo() {
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div className='text-zinc-700 dark:text-white cursor-pointer' title='پاسخ'>
+                                        <div className='text-zinc-700 dark:text-white cursor-pointer' title='پاسخ' onClick={() => setShowReplyCommentModal(true)}>
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 xs:w-6 xs:h-6">
                                                 <path fillRule="evenodd" d="M9.53 2.47a.75.75 0 0 1 0 1.06L4.81 8.25H15a6.75 6.75 0 0 1 0 13.5h-3a.75.75 0 0 1 0-1.5h3a5.25 5.25 0 1 0 0-10.5H4.81l4.72 4.72a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z" clipRule="evenodd" />
                                             </svg>
@@ -335,6 +363,21 @@ export default function ProductInfo() {
                         </div>
                     </div>
                 </div>
+
+                <Modal
+                    showModalState={showReplyCommentModal}
+                    setShowModalState={setShowReplyCommentModal}
+                    title="پاسخ شما"
+                >
+                    <div>
+                        <label htmlFor="reply-comment-input" className='text-sm'> متن پاسخ شما </label>
+                        <textarea id="reply-comment-input" className='w-full mt-1 p-2 text-sm outline-none focus:outline-none border-[1px] border-gray-200 dark:border-gray-400 bg-blue-200/30 resize-none dark:bg-gray-500 dark:text-white placeholder:text-zinc-500 dark:placeholder:text-gray-300 rounded' placeholder='پاسخ خود را وارد کنید...' rows={5}></textarea>
+                    </div>
+                    <button className='btn-orange w-full p-2 mt-1.5 rounded' onClick={() => {
+                        setShowReplyCommentModal(false)
+                        showAddReplyToCommentAlert()
+                    }}> ارسال پاسخ </button>
+                </Modal>
             </section>
             <Footer />
         </>
