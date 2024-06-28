@@ -1340,6 +1340,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   width: 1px;
 }
 
+.w-\[85\%\] {
+  width: 85%;
+}
+
 .min-w-27 {
   min-width: 6.25rem;
 }
@@ -1632,6 +1636,22 @@ table tbody tr:not(:first-child):is(.dark *) {
   border-radius: 0.75rem;
 }
 
+.rounded-bl-xl {
+  border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-br-xl {
+  border-bottom-right-radius: 0.75rem;
+}
+
+.rounded-tl-xl {
+  border-top-left-radius: 0.75rem;
+}
+
+.rounded-tr-xl {
+  border-top-right-radius: 0.75rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1865,6 +1885,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .bg-yellow-200\/50 {
   background-color: rgb(254 240 138 / 0.5);
+}
+
+.bg-gray-200\/50 {
+  background-color: rgb(229 231 235 / 0.5);
 }
 
 .bg-blog-header {
@@ -3155,6 +3179,11 @@ table tbody tr:not(:first-child):is(.dark *) {
   .xs\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .xs\:text-sm\/5 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .child\:xs\:text-sm > * {
