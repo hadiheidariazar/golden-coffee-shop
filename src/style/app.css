@@ -1042,6 +1042,18 @@ table tbody tr:not(:first-child):is(.dark *) {
   margin-inline-end: 0.5rem;
 }
 
+.-mb-2 {
+  margin-bottom: -0.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.ms-2 {
+  margin-inline-start: 0.5rem;
+}
+
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -1724,6 +1736,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   border-top-width: 3px;
 }
 
+.border-dashed {
+  border-style: dashed;
+}
+
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
@@ -1765,6 +1781,11 @@ table tbody tr:not(:first-child):is(.dark *) {
 .border-zinc-700 {
   --tw-border-opacity: 1;
   border-color: rgb(63 63 70 / var(--tw-border-opacity));
+}
+
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
 
 .border-b-black {
@@ -1938,6 +1959,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 .bg-zinc-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
+}
+
+.bg-blue-200\/30 {
+  background-color: rgb(191 219 254 / 0.3);
 }
 
 .bg-blog-header {
@@ -2339,6 +2364,11 @@ table tbody tr:not(:first-child):is(.dark *) {
 .text-base\/3 {
   font-size: 1rem;
   line-height: .75rem;
+}
+
+.text-3xl\/normal {
+  font-size: 1.875rem;
+  line-height: 1.5;
 }
 
 .font-bold {
@@ -2838,6 +2868,11 @@ table tbody tr:not(:first-child):is(.dark *) {
   border-top-color: rgb(255 255 255 / 0.1);
 }
 
+.dark\:border-b-white:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
 .dark\:bg-blue-200\/60:is(.dark *) {
   background-color: rgb(191 219 254 / 0.6);
 }
@@ -2983,6 +3018,16 @@ table tbody tr:not(:first-child):is(.dark *) {
 .dark\:placeholder\:text-zinc-200:is(.dark *)::placeholder {
   --tw-text-opacity: 1;
   color: rgb(228 228 231 / var(--tw-text-opacity));
+}
+
+.dark\:placeholder\:text-gray-300:is(.dark *)::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.dark\:placeholder\:text-gray-300:is(.dark *)::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .hover\:dark\:bg-orange-300\/20:is(.dark *):hover {

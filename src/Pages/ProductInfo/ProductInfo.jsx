@@ -20,9 +20,17 @@ export default function ProductInfo() {
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-    const showAlert = () => {
+    const showAddToCartAlert = () => {
         Swal.fire({
             text: 'محصول مورد نظر با موفقیت به سبد خرید اضافه شد',
+            icon: 'success',
+            confirmButtonText: 'متوجه شدم!'
+        })
+    }
+
+    const showAddCommentAlert = () => {
+        Swal.fire({
+            text: 'دیدگاه شما با موفقیت ثبت شد شد',
             icon: 'success',
             confirmButtonText: 'متوجه شدم!'
         })
@@ -171,7 +179,7 @@ export default function ProductInfo() {
                             </div>
                             <div className='flex justify-between items-center bg-white dark:bg-zinc-700 dark:text-white px-4 py-3 rounded-lg'>
                                 <div className='me-2'>
-                                    <button className='btn-orange text-sm/4 xs:text-base/4 p-3 rounded-md tracking-tighter' onClick={showAlert}> افزودن به سبد </button>
+                                    <button className='btn-orange text-sm/4 xs:text-base/4 p-3 rounded-md tracking-tighter' onClick={showAddToCartAlert}> افزودن به سبد </button>
                                 </div>
                                 <div className='flex flex-col text-end'>
                                     <span className='text-red-500 dark:text-gray-300 text-[13px] xs:text-sm line-through mb-3'> 2,000,000 </span>
@@ -182,6 +190,30 @@ export default function ProductInfo() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section className='comments mb-20 md:mb-28'>
+                <div className="container">
+                    <h2 className=' text-3xl/normal font-morabba-medium dark:text-white border-b-2 border-b-black dark:border-b-white w-max'> دیدگاه شما </h2>
+                    <div className="new-comment bg-white dark:bg-zinc-700 border-2 border-dashed border-gray-500 p-4 rounded-lg mt-5 dark:text-white">
+                        <div className='mb-8'>
+                            <label htmlFor="user-score"> امتیاز: </label>
+                            <select id="user-score" className='text-black bg-blue-200/30 dark:bg-gray-500 dark:text-white ms-2 py-1 focus:outline-none w-40 rounded-lg'>
+                                <option value="عالی">عالی</option>
+                                <option value="بسیار خوب">بسیار خوب</option>
+                                <option value="خوب">خوب</option>
+                                <option value="متوسط">متوسط</option>
+                                <option value="ضعیف">ضعیف</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label htmlFor="user-comment-input"> متن دیدگاه شما </label>
+                            <textarea id='user-comment-input' rows="5" className='w-full focus:outline-none rounded-md text-black bg-blue-200/30 dark:bg-gray-500 dark:text-white px-3 py-2 resize-none -mb-2 mt-2 dark:placeholder:text-gray-300' placeholder='دیدگاه خود را بنویسید...'></textarea>
+                        </div>
+                        <button className='btn-orange px-3 py-2 rounded-md mt-6' onClick={showAddCommentAlert}>
+                            ثبت دیدگاه
+                        </button>
                     </div>
                 </div>
             </section>
