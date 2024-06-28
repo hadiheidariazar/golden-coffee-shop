@@ -89,6 +89,31 @@ export default function ProductInfo() {
                                 </SwiperSlide>
                             </Swiper>
                         </div>
+                        <div className="flex flex-col space-y-4 md:space-y-3 xl:space-y-5 w-full md:w-1/2 ipad:w-2/3 my-4 md:my-0 md:mx-4">
+                            <div className='flex flex-col bg-white dark:bg-zinc-700 dark:text-white px-4 py-3 rounded-lg'>
+                                <div className='h-12 ipad:h-10 mb-6 ipad:mb-3 xl:mb-6'>
+                                    <h1 className='product-title text-lg/6 ipad:text-base/5 xl:text-lg/6 line-clamp-2'>
+                                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                                    </h1>
+                                </div>
+                                <div className='flex flex-col xs:flex-row justify-between items-center space-y-2 xs:space-y-0'>
+                                    <div className='bg-green-200 text-green-700 w-full xs:w-max text-center px-2 py-1'>
+                                        <span className='font-morabba-medium'>
+                                            موجود در انبار
+                                        </span>
+                                    </div>
+                                    <div className='bg-orange-200/80 dark:bg-orange-200 text-orange-600 px-2 py-1 w-full xs:max-w-44 xs:w-max'>
+                                        <p className='text-center font-morabba-medium text-sm'>
+                                            دسته بندی
+                                            <br />
+                                            <span className='line-clamp-1'>
+                                                لوازم جانبی و تجهیزات و برقییی
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
