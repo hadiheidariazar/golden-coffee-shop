@@ -2141,6 +2141,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   padding-bottom: 1.25rem;
 }
 
+.pb-9 {
+  padding-bottom: 2.25rem;
+}
+
 .pe-10 {
   padding-inline-end: 2.5rem;
 }
