@@ -4,6 +4,7 @@ import Blogs from "./Pages/Blogs/Blogs";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
+import ProductInfo from "./Pages/ProductInfo/ProductInfo";
 import Register from "./Pages/Register/Register";
 import Shop from "./Pages/Shop/Shop";
 import AccountDetails from "./Pages/UserPanel/AccountDetails/AccountDetails";
@@ -23,6 +24,7 @@ const routes = [
     {path: "/register", element: <Register />},
     {path: "/blog/:shortName", element: <BlogInfo />},
     {path: "/category/:shortName", element: <Shop />},
+    {path: "/product/:shortName", element: <ProductInfo />},
     {path: "/my-account/*", element: <UserPanel />, children: [
         {path: "", element: <Counter />},
         {path: "orders", element: <Orders />},
