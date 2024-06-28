@@ -1567,6 +1567,12 @@ table tbody tr:not(:first-child):is(.dark *) {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -1690,6 +1696,11 @@ table tbody tr:not(:first-child):is(.dark *) {
 .border-zinc-700 {
   --tw-border-opacity: 1;
   border-color: rgb(63 63 70 / var(--tw-border-opacity));
+}
+
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
 .border-b-black {
@@ -2452,6 +2463,16 @@ table tbody tr:not(:first-child):is(.dark *) {
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
+.placeholder\:text-zinc-500::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(113 113 122 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-zinc-500::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(113 113 122 / var(--tw-text-opacity));
+}
+
 .hover\:border-b-2:hover {
   border-bottom-width: 2px;
 }
@@ -2595,6 +2616,11 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .child\:tracking-tightest > * {
   letter-spacing: -0.065em;
+}
+
+.child\:text-zinc-800 > * {
+  --tw-text-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity));
 }
 
 .child\:transition-all > * {
@@ -2850,6 +2876,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   border-bottom-color: rgb(255 255 255 / 0.1);
 }
 
+.child\:dark\:bg-blue-200\/60:is(.dark *) > * {
+  background-color: rgb(191 219 254 / 0.6);
+}
+
 .child\:dark\:text-white:is(.dark *) > * {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2876,6 +2906,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .xs\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .xs\:mt-5 {
+    margin-top: 1.25rem;
   }
 
   .xs\:aspect-\[2\/1\] {
