@@ -1827,6 +1827,15 @@ table tbody tr:not(:first-child):is(.dark *) {
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
+.bg-purple-400\/50 {
+  background-color: rgb(192 132 252 / 0.5);
+}
+
+.bg-purple-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 51 234 / var(--tw-bg-opacity));
+}
+
 .bg-blog-header {
   background-image: url('/images/slides/2.jpg');
 }
@@ -2939,6 +2948,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .xs\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .xs\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .xs\:gap-3 {
