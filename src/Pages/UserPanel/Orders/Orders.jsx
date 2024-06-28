@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import TitlePage from '../../../Components/TitlePage/TitlePage'
 import CounterBox from '../../../Components/CounterBox/CounterBox'
 
 export default function Orders() {
+
+    const [tabActive, setTabActive] = useState("first")
+    const tab = useRef()
+
+    const active = (event) => {
+        setTabActive(event.target.classList[9])
+    }
+
     return (
         <>
             <TitlePage title="سفارش ها - پنل کاربری" />
@@ -46,6 +54,19 @@ export default function Orders() {
 
 
                         </CounterBox>
+                    </div>
+                    <div className="tabs mt-10 border-b-[1px] pb-3 border-b-gray-300 dark:border-b-white/30">
+                        <ul className='flex gap-x-5' ref={tab}>
+                            <li>
+                                <a className={`cursor-default pb-3 hover:border-b-2 border-b-blue-500 hover:text-blue-600 dark:hover:text-blue-500 font-bold dark:font-normal transition-colors first ${tabActive === 'first' ? "text-blue-600 dark:text-blue-500 border-b-blue-500 border-b-2" : ""}`} onClick={active}> در حال انجام </a>
+                            </li>
+                            <li>
+                                <a className={`cursor-default pb-3 hover:border-b-2 border-b-blue-500 hover:text-blue-600 dark:hover:text-blue-500 font-bold dark:font-normal transition-colors second ${tabActive === 'second' ? "text-blue-600 dark:text-blue-500 border-b-blue-500 border-b-2" : ""}`} onClick={active}> تکمیل شده </a>
+                            </li>
+                            <li>
+                                <a className={`cursor-default pb-3 hover:border-b-2 border-b-blue-500 hover:text-blue-600 dark:hover:text-blue-500 font-bold dark:font-normal transition-colors last ${tabActive === 'last' ? "text-blue-600 dark:text-blue-500 border-b-blue-500 border-b-2" : ""}`} onClick={active}> لغو شده </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
