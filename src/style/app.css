@@ -1469,6 +1469,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   gap: 1rem;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-x-0 {
   -moz-column-gap: 0px;
        column-gap: 0px;
@@ -1845,6 +1849,22 @@ table tbody tr:not(:first-child):is(.dark *) {
 .bg-purple-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(147 51 234 / var(--tw-bg-opacity));
+}
+
+.bg-gray-300\/50 {
+  background-color: rgb(209 213 219 / 0.5);
+}
+
+.bg-green-200\/60 {
+  background-color: rgb(187 247 208 / 0.6);
+}
+
+.bg-red-200\/60 {
+  background-color: rgb(254 202 202 / 0.6);
+}
+
+.bg-yellow-200\/50 {
+  background-color: rgb(254 240 138 / 0.5);
 }
 
 .bg-blog-header {
@@ -2386,6 +2406,21 @@ table tbody tr:not(:first-child):is(.dark *) {
   color: rgb(24 24 27 / var(--tw-text-opacity));
 }
 
+.text-green-700 {
+  --tw-text-opacity: 1;
+  color: rgb(21 128 61 / var(--tw-text-opacity));
+}
+
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+.text-yellow-600 {
+  --tw-text-opacity: 1;
+  color: rgb(202 138 4 / var(--tw-text-opacity));
+}
+
 .line-through {
   text-decoration-line: line-through;
 }
@@ -2732,6 +2767,25 @@ table tbody tr:not(:first-child):is(.dark *) {
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
+.dark\:bg-green-200:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-red-200:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-white\/90:is(.dark *) {
+  background-color: rgb(255 255 255 / 0.9);
+}
+
+.dark\:bg-yellow-100:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 249 195 / var(--tw-bg-opacity));
+}
+
 .dark\:font-normal:is(.dark *) {
   font-weight: 400;
 }
@@ -2872,6 +2926,11 @@ table tbody tr:not(:first-child):is(.dark *) {
   color: rgb(63 63 70 / var(--tw-text-opacity));
 }
 
+.dark\:hover\:text-orange-400:hover:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-text-opacity));
+}
+
 .child\:dark\:border-b-white\/10:is(.dark *) > * {
   border-bottom-color: rgb(255 255 255 / 0.1);
 }
@@ -2992,6 +3051,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     gap: 0.75rem;
   }
 
+  .xs\:gap-2 {
+    gap: 0.5rem;
+  }
+
   .xs\:bg-\[left_top\] {
     background-position: left top;
   }
@@ -3014,6 +3077,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .xs\:p-5 {
     padding: 1.25rem;
+  }
+
+  .xs\:p-3 {
+    padding: 0.75rem;
   }
 
   .xs\:px-2 {

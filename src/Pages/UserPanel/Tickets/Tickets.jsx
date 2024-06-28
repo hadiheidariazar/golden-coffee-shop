@@ -75,6 +75,36 @@ export default function Tickets() {
                             </form>
                         </div>
                     </div>
+                    <div className="my-ticket bg-gray-100 dark:bg-zinc-800 rounded-lg mt-10 p-3 xs:p-5">
+                        <h3 className='font-morabba-medium border-b-[1px] pb-2 border-b-gray-300 dark:border-b-white/30'> تیکت های من </h3>
+                        <div className='tickets mt-5'>
+                            <div className="ticket mt-3 flex flex-col gap-3 bg-white dark:bg-zinc-700 p-2 xs:p-3 rounded-md">
+                                <h4 className='text-sm/4 sm:text-base/5 line-clamp-2'>
+                                    <a href="?id=12" className='hover:text-orange-500 dark:hover:text-orange-400 transition-colors'>
+                                        متن تستی بدون معنی
+                                    </a>
+                                </h4>
+                                <div className='flex gap-1 xs:gap-2 flex-wrap'>
+                                    <span className='text-xs text-center bg-green-200/60 dark:bg-green-200 p-1 tracking-tighter rounded text-green-700'> پاسخ داده شده </span>
+                                    <span className='text-xs text-center bg-yellow-200/50 dark:bg-yellow-100 font-dana-bold p-1 tracking-tighter rounded text-yellow-600'> ارتباط با مدیریت </span>
+                                    <span className='text-xs text-center bg-gray-300/50 dark:bg-white/90 font-dana-bold p-1 tracking-tighter rounded text-gray-600'> 1402/12/25</span>
+                                </div>
+                            </div>
+                            <div className="ticket mt-3 flex flex-col gap-3 bg-white dark:bg-zinc-700 p-2 xs:p-3 rounded-md">
+                                <h4 className='text-sm/4 sm:text-base/5 line-clamp-2'>
+                                    <a href="?id=12" className='hover:text-orange-500 dark:hover:text-orange-400 transition-colors'>
+                                        ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم
+                                        ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم
+                                    </a>
+                                </h4>
+                                <div className='flex gap-1 xs:gap-2 flex-wrap'>
+                                    <span className='text-xs text-center bg-red-200/60 dark:bg-red-200 p-1 tracking-tighter rounded text-red-700'> پاسخ داده نشده </span>
+                                    <span className='text-xs text-center bg-yellow-200/50 dark:bg-yellow-100 font-dana-bold p-1 tracking-tighter rounded text-yellow-600'> مشاوره </span>
+                                    <span className='text-xs text-center bg-gray-300/50 dark:bg-white/90 font-dana-bold p-1 tracking-tighter rounded text-gray-600'> 1402/12/25</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </>
