@@ -1,4 +1,5 @@
 import AboutUs from "./Pages/AboutUs/AboutUs";
+import AccountDetails from "./Pages/AccountDetails/AccountDetails";
 import BlogInfo from "./Pages/BlogInfo/BlogInfo";
 import Blogs from "./Pages/Blogs/Blogs";
 import ContactUs from "./Pages/ContactUs/ContactUs";
@@ -21,7 +22,8 @@ const routes = [
     {path: "/blog/:shortName", element: <BlogInfo />},
     {path: "/category/:shortName", element: <Shop />},
     {path: "/my-account/*", element: <UserPanel />, children: [
-        {path: "", element: <Counter />}
+        {path: "", element: <Counter />},
+        {path: "details", element: <AccountDetails />},
     ]},
 ]
 
