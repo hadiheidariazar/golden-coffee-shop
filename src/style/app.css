@@ -882,6 +882,11 @@ table tbody tr:not(:first-child):is(.dark *) {
   margin-bottom: 1rem;
 }
 
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .-mb-3 {
   margin-bottom: -0.75rem;
 }
@@ -1052,6 +1057,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .ms-2 {
   margin-inline-start: 0.5rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
 }
 
 .line-clamp-1 {
@@ -1386,6 +1395,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .w-px {
   width: 1px;
+}
+
+.w-11 {
+  width: 2.75rem;
 }
 
 .min-w-27 {
@@ -2924,6 +2937,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
+.dark\:bg-zinc-500\/60:is(.dark *) {
+  background-color: rgb(113 113 122 / 0.6);
+}
+
 .dark\:font-normal:is(.dark *) {
   font-weight: 400;
 }
@@ -2990,6 +3007,11 @@ table tbody tr:not(:first-child):is(.dark *) {
 .dark\:text-zinc-800:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(39 39 42 / var(--tw-text-opacity));
+}
+
+.dark\:text-zinc-300:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(212 212 216 / var(--tw-text-opacity));
 }
 
 .dark\:placeholder\:text-gray-200:is(.dark *)::-moz-placeholder {
@@ -3107,6 +3129,11 @@ table tbody tr:not(:first-child):is(.dark *) {
     margin-bottom: 0.75rem;
   }
 
+  .xs\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
   .xs\:mb-3 {
     margin-bottom: 0.75rem;
   }
@@ -3155,6 +3182,14 @@ table tbody tr:not(:first-child):is(.dark *) {
     height: 8rem;
   }
 
+  .xs\:h-14 {
+    height: 3.5rem;
+  }
+
+  .xs\:h-6 {
+    height: 1.5rem;
+  }
+
   .xs\:w-12 {
     width: 3rem;
   }
@@ -3188,6 +3223,14 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: max-content;
   }
 
+  .xs\:w-14 {
+    width: 3.5rem;
+  }
+
+  .xs\:w-6 {
+    width: 1.5rem;
+  }
+
   .xs\:max-w-44 {
     max-width: 11rem;
   }
@@ -3218,6 +3261,16 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .xs\:gap-3 {
     gap: 0.75rem;
+  }
+
+  .xs\:gap-x-3 {
+    -moz-column-gap: 0.75rem;
+         column-gap: 0.75rem;
+  }
+
+  .xs\:gap-x-4 {
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
   }
 
   .xs\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -3340,6 +3393,11 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .xs\:text-base\/4 {
     font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  .xs\:text-xs {
+    font-size: 0.75rem;
     line-height: 1rem;
   }
 

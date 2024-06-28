@@ -215,6 +215,125 @@ export default function ProductInfo() {
                             ثبت دیدگاه
                         </button>
                     </div>
+                    <h2 className=' text-3xl/normal font-morabba-medium dark:text-white border-b-2 border-b-black dark:border-b-white w-max mt-14'> دیدگاه ها </h2>
+                    <div className="comments">
+                        <div className="flex flex-col gap-y-4 bg-white dark:bg-zinc-700 border-2 border-dashed border-gray-500 p-4 xs:p-5 rounded-lg mt-5 dark:text-white">
+                            <div className='flex items-center gap-x-1.5 xs:gap-x-4'>
+                                <img loading="lazy" src="/images/avatars/avatar10.png" alt="User Profile" className='rounded-full w-11 h-11 xs:w-14 xs:h-14' />
+                                <div className='w-full'>
+                                    <p className='font-dana-bold text-zinc-800 text-base dark:text-white w-max max-w-44 line-clamp-1'> هادی حیدری آذر </p>
+                                    <div className='flex justify-between'>
+                                        <div className='flex items-center gap-x-2 xs:gap-x-3'>
+                                            <span className='text-[11px] xs:text-xs mt-1 font-bold text-zinc-500 dark:text-zinc-300'> 1402/12/25 </span>
+                                            <div className='flex items-center'>
+                                                <svg className="w-4 h-4 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                                                    stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z">
+                                                    </path>
+                                                </svg>
+                                                <svg className="w-4 h-4 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="#eab308" viewBox="0 0 24 24" strokeWidth="1.5"
+                                                    stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z">
+                                                    </path>
+                                                </svg>
+                                                <svg className="w-4 h-4 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="#eab308" viewBox="0 0 24 24" strokeWidth="1.5"
+                                                    stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z">
+                                                    </path>
+                                                </svg>
+                                                <svg className="w-4 h-4 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="#eab308" viewBox="0 0 24 24" strokeWidth="1.5"
+                                                    stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z">
+                                                    </path>
+                                                </svg>
+                                                <svg className="w-4 h-4 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="#eab308" viewBox="0 0 24 24" strokeWidth="1.5"
+                                                    stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <a href='/login' className='btn-orange text-xs xs:text-sm p-2 rounded font-dana-bold'> وارد شوید </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='comment-content'>
+                                <p className='text-sm xs:text-base'>
+                                    سلام
+                                    <br />
+                                    ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم. می‌پنداریم که نظر مردم ایران و منطقه باید نسبت به کالای ایرانی بهبود یابد و در این راستا با اشتیاق می‌کوشیم.
+                                    ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم. می‌پنداریم که نظر مردم ایران و منطقه باید نسبت به کالای ایرانی بهبود یابد و در این راستا با اشتیاق می‌کوشیم.
+                                </p>
+
+                                <div className="reply-container"></div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-y-4 bg-white dark:bg-zinc-700 border-2 border-dashed border-gray-500 p-4 xs:p-5 rounded-lg mt-5 dark:text-white">
+                            <div className='flex items-center gap-x-1.5 xs:gap-x-4'>
+                                <img loading="lazy" src="/images/avatars/avatar1.jpg" alt="User Profile" className='rounded-full w-11 h-11 xs:w-14 xs:h-14' />
+                                <div className='w-full'>
+                                    <p className='font-dana-bold text-zinc-800 text-base dark:text-white w-max max-w-44 line-clamp-1'> هادی حیدری آذر </p>
+                                    <div className='flex justify-between'>
+                                        <div className='flex items-center gap-x-2 xs:gap-x-3'>
+                                            <span className='text-[11px] xs:text-xs mt-1 font-bold text-zinc-500 dark:text-zinc-300'> 1402/12/25 </span>
+                                            <div className='flex items-center'>
+                                                <svg className="w-4 h-4 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="#eab308" viewBox="0 0 24 24" strokeWidth="1.5"
+                                                    stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z">
+                                                    </path>
+                                                </svg>
+                                                <svg className="w-4 h-4 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="#eab308" viewBox="0 0 24 24" strokeWidth="1.5"
+                                                    stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z">
+                                                    </path>
+                                                </svg>
+                                                <svg className="w-4 h-4 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="#eab308" viewBox="0 0 24 24" strokeWidth="1.5"
+                                                    stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z">
+                                                    </path>
+                                                </svg>
+                                                <svg className="w-4 h-4 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="#eab308" viewBox="0 0 24 24" strokeWidth="1.5"
+                                                    stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z">
+                                                    </path>
+                                                </svg>
+                                                <svg className="w-4 h-4 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="#eab308" viewBox="0 0 24 24" strokeWidth="1.5"
+                                                    stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div className='text-zinc-700 dark:text-white cursor-pointer' title='پاسخ'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 xs:w-6 xs:h-6">
+                                                <path fillRule="evenodd" d="M9.53 2.47a.75.75 0 0 1 0 1.06L4.81 8.25H15a6.75 6.75 0 0 1 0 13.5h-3a.75.75 0 0 1 0-1.5h3a5.25 5.25 0 1 0 0-10.5H4.81l4.72 4.72a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z" clipRule="evenodd" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='comment-content'>
+                                <p className='text-sm xs:text-base'>
+                                    سلام
+                                    <br />
+                                    ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم. می‌پنداریم که نظر مردم ایران و منطقه باید نسبت به کالای ایرانی بهبود یابد و در این راستا با اشتیاق می‌کوشیم.
+                                    ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم. می‌پنداریم که نظر مردم ایران و منطقه باید نسبت به کالای ایرانی بهبود یابد و در این راستا با اشتیاق می‌کوشیم.
+                                </p>
+
+                                <div className="reply-container"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <Footer />
