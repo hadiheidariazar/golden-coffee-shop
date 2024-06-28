@@ -10,7 +10,7 @@ export default function ProductBox() {
                 <span
                     className="absolute top-0 right-0 py-1 px-2 text-xs xs:text-sm font-bold text-zinc-700 bg-orange-300 rounded-full">15%</span>
             </a>
-            <a href="#"
+            <a href="/category/coffee"
                 className="inline-block bg-sky-700 p-1 xs:py-1 xs:px-2 rounded-full text-white text-[11px]/3 md:text-sm/3 font-morabba -translate-y-full">
                 لوازم جانبی و تجهیزات
             </a>
