@@ -10,6 +10,7 @@ import AccountDetails from "./Pages/UserPanel/AccountDetails/AccountDetails";
 import Counter from "./Pages/UserPanel/Counter/Counter";
 import UserPanel from "./Pages/UserPanel/Index";
 import Orders from "./Pages/UserPanel/Orders/Orders";
+import Tickets from "./Pages/UserPanel/Tickets/Tickets";
 
 const routes = [
     {path: "/", element: <Home />},
@@ -25,6 +26,7 @@ const routes = [
     {path: "/my-account/*", element: <UserPanel />, children: [
         {path: "", element: <Counter />},
         {path: "orders", element: <Orders />},
+        {path: "tickets", element: <Tickets />},
         {path: "details", element: <AccountDetails />},
     ]},
 ]
