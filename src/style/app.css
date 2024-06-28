@@ -1795,6 +1795,24 @@ table tbody tr:not(:first-child):is(.dark *) {
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
+.bg-red-300\/50 {
+  background-color: rgb(252 165 165 / 0.5);
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.bg-slate-300\/50 {
+  background-color: rgb(203 213 225 / 0.5);
+}
+
+.bg-slate-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+
 .bg-blog-header {
   background-image: url('/images/slides/2.jpg');
 }
@@ -3461,6 +3479,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     max-width: 12rem;
   }
 
+  .ipad\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .ipad\:gap-x-2 {
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
@@ -3521,6 +3543,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:gap-x-5 {
