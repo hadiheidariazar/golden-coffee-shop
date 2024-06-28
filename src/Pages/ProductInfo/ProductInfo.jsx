@@ -4,6 +4,7 @@ import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 import Breadcrumb from '../../Components/Breadcrumb/Breadcrumb'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import Swal from 'sweetalert2'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -18,6 +19,14 @@ import { Zoom, FreeMode, Navigation, Thumbs } from 'swiper/modules';
 export default function ProductInfo() {
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+    const showAlert = () => {
+        Swal.fire({
+            text: 'محصول مورد نظر با موفقیت به سبد خرید اضافه شد',
+            icon: 'success',
+            confirmButtonText: 'متوجه شدم!'
+        })
+    }
 
     return (
         <>
@@ -158,6 +167,18 @@ export default function ProductInfo() {
                                             </path>
                                         </svg>
                                     </div>
+                                </div>
+                            </div>
+                            <div className='flex justify-between items-center bg-white dark:bg-zinc-700 dark:text-white px-4 py-3 rounded-lg'>
+                                <div className='me-2'>
+                                    <button className='btn-orange text-sm/4 xs:text-base/4 p-3 rounded-md tracking-tighter' onClick={showAlert}> افزودن به سبد </button>
+                                </div>
+                                <div className='flex flex-col text-end'>
+                                    <span className='text-red-500 dark:text-gray-300 text-[13px] xs:text-sm line-through mb-3'> 2,000,000 </span>
+                                    <span className='text-green-600 dark:text-green-500 font-dana-bold text-base/3 xs:text-2xl/3'>
+                                        2,000,000
+                                        <span className='text-[10px] xs:text-sm'> تومان </span>
+                                    </span>
                                 </div>
                             </div>
                         </div>
