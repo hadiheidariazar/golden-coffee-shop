@@ -14,27 +14,34 @@ import UserPanel from "./Pages/UserPanel/Index";
 import Orders from "./Pages/UserPanel/Orders/Orders";
 import Tickets from "./Pages/UserPanel/Tickets/Tickets";
 import AdminPanel from './Pages/AdminPanel/Index'
+import MainPage from "./Pages/AdminPanel/MainPage/MainPage";
 
 const routes = [
-    {path: "/", element: <Home />},
-    {path: "/shop", element: <Shop />},
-    {path: "/blogs", element: <Blogs />},
-    {path: "/about-us", element: <AboutUs />},
-    {path: "/contact-us", element: <ContactUs />},
-    {path: "/order", element: <OrderConfirm />},
-    {path: "/login", element: <Login />},
-    {path: "/register", element: <Register />},
-    {path: "/register", element: <Register />},
-    {path: "/blog/:shortName", element: <BlogInfo />},
-    {path: "/category/:shortName", element: <Shop />},
-    {path: "/product/:shortName", element: <ProductInfo />},
-    {path: "/my-account/*", element: <UserPanel />, children: [
-        {path: "", element: <Counter />},
-        {path: "orders", element: <Orders />},
-        {path: "tickets", element: <Tickets />},
-        {path: "details", element: <AccountDetails />},
-    ]},
-    {path: "/admin-panel/*", element: <AdminPanel />}
+    { path: "/", element: <Home /> },
+    { path: "/shop", element: <Shop /> },
+    { path: "/blogs", element: <Blogs /> },
+    { path: "/about-us", element: <AboutUs /> },
+    { path: "/contact-us", element: <ContactUs /> },
+    { path: "/order", element: <OrderConfirm /> },
+    { path: "/login", element: <Login /> },
+    { path: "/register", element: <Register /> },
+    { path: "/register", element: <Register /> },
+    { path: "/blog/:shortName", element: <BlogInfo /> },
+    { path: "/category/:shortName", element: <Shop /> },
+    { path: "/product/:shortName", element: <ProductInfo /> },
+    {
+        path: "/my-account/*", element: <UserPanel />, children: [
+            { path: "", element: <Counter /> },
+            { path: "orders", element: <Orders /> },
+            { path: "tickets", element: <Tickets /> },
+            { path: "details", element: <AccountDetails /> },
+        ]
+    },
+    {
+        path: "/admin-panel/*", element: <AdminPanel />, children: [
+            { path: '', element: <MainPage /> }
+        ]
+    }
 ]
 
 export default routes
