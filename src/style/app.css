@@ -1394,6 +1394,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   width: 39px;
 }
 
+.w-\[400px\] {
+  width: 400px;
+}
+
 .w-\[450px\] {
   width: 450px;
 }
@@ -1420,6 +1424,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .w-\[980px\] {
   width: 980px;
+}
+
+.w-\[inherit\] {
+  width: inherit;
 }
 
 .w-auto {
@@ -3410,6 +3418,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 47px;
   }
 
+  .xs\:w-full {
+    width: 100%;
+  }
+
   .xs\:w-max {
     width: -moz-max-content;
     width: max-content;
@@ -3522,6 +3534,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .xs\:pb-3 {
     padding-bottom: 0.75rem;
+  }
+
+  .xs\:pe-0 {
+    padding-inline-end: 0px;
   }
 
   .xs\:text-2xl {
@@ -3659,6 +3675,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .sm\:h-full {
     height: 100%;
+  }
+
+  .sm\:w-20 {
+    width: 5rem;
   }
 
   .sm\:w-\[500px\] {
@@ -4257,6 +4277,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     max-width: 12rem;
   }
 
+  .ipad\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
   .ipad\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -4342,6 +4366,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .lg\:w-\[95\%\] {
     width: 95%;
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-3 {

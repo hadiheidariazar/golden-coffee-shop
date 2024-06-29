@@ -4,6 +4,7 @@ import CounterBox from '../../../Components/CounterBox/CounterBox'
 import Datas from '../SellAndProfitDatas.js'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 import AdminPanelTableTitle from '../../../Components/AdminPanelTableTitle/AdminPanelTableTitle'
+import DataTable from '../../../Components/DataTable/DataTable.jsx'
 
 export default function MainPage() {
 
@@ -99,6 +100,45 @@ export default function MainPage() {
                                 <Line type="monotone" dataKey="سود" strokeOpacity={opacity.sell} stroke="#10b981" />
                             </LineChart>
                         </ResponsiveContainer>
+                    </AdminPanelTableTitle>
+                </div>
+                <div className='grid grid-cols-1 md:grid-cols-2 ipad:grid-cols-1 lg:grid-cols-2 justify-center items-start gap-4 mt-8'>
+                    <AdminPanelTableTitle
+                        title="ثبت نامی های اخیر"
+                        isList={true}
+                    >
+                        <DataTable
+                            headerItemCount={2}
+                            headerItemTitle={['نام کاربر', 'تاریخ']}
+                            breakPoint='w-[400px] xs:w-full xs:pe-0'
+                            setionsTableWidth={['w-[inherit]', 'w-16 sm:w-20']}
+                        >
+                            <tr>
+                                <td className='w-14 text-xs'>1</td>
+                                <td className='line-clamp-2 w-[inherit]'> آرین محمودی </td>
+                                <td className='w-16 sm:w-20'> 1403/2/28 </td>
+                            </tr>
+                            <tr>
+                                <td className='w-14 text-xs'>2</td>
+                                <td className='line-clamp-2 w-[inherit]'> مهدی حسینی </td>
+                                <td className='w-16 sm:w-20'> 1403/2/17 </td>
+                            </tr>
+                            <tr>
+                                <td className='w-14 text-xs'>3</td>
+                                <td className='line-clamp-2 w-[inherit]'> بابک تسمی </td>
+                                <td className='w-16 sm:w-20'> 1403/2/9 </td>
+                            </tr>
+                            <tr>
+                                <td className='w-14 text-xs'>4</td>
+                                <td className='line-clamp-2 w-[inherit]'> قدیر یلمه </td>
+                                <td className='w-16 sm:w-20'> 1403/2/2 </td>
+                            </tr>
+                            <tr>
+                                <td className='w-14 text-xs'>5</td>
+                                <td className='line-clamp-2 w-[inherit]'> هادی حیدری آذر</td>
+                                <td className='w-16 sm:w-20'> 1403/1/27 </td>
+                            </tr>
+                        </DataTable>
                     </AdminPanelTableTitle>
                 </div>
             </section>
