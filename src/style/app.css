@@ -1447,6 +1447,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   width: 1px;
 }
 
+.w-\[88px\] {
+  width: 88px;
+}
+
 .min-w-27 {
   min-width: 6.25rem;
 }
@@ -2828,6 +2832,11 @@ table tbody tr:not(:first-child):is(.dark *) {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:text-orange-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -3701,6 +3710,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 1px;
   }
 
+  .sm\:w-27 {
+    width: 6.25rem;
+  }
+
   .sm\:max-w-64 {
     max-width: 16rem;
   }
@@ -4026,6 +4039,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 100%;
   }
 
+  .md\:w-\[135px\] {
+    width: 135px;
+  }
+
   .md\:max-w-\[420px\] {
     max-width: 420px;
   }
@@ -4273,6 +4290,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 90%;
   }
 
+  .ipad\:w-24 {
+    width: 6rem;
+  }
+
   .ipad\:max-w-48 {
     max-width: 12rem;
   }
@@ -4368,6 +4389,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 95%;
   }
 
+  .lg\:w-32 {
+    width: 8rem;
+  }
+
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -4423,6 +4448,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .xl\:h-36 {
     height: 9rem;
+  }
+
+  .xl\:w-28 {
+    width: 7rem;
   }
 
   .xl\:max-w-\[550px\] {

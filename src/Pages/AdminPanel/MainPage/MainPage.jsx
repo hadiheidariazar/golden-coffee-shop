@@ -140,6 +140,73 @@ export default function MainPage() {
                             </tr>
                         </DataTable>
                     </AdminPanelTableTitle>
+                    <AdminPanelTableTitle
+                        title="محصولات پر فروش"
+                        isList={true}
+                    >
+                        <DataTable
+                            headerItemCount={2}
+                            headerItemTitle={['عنوان کالا', 'تعداد فروش']}
+                            breakPoint='w-[400px] xs:w-full xs:pe-0'
+                            setionsTableWidth={['w-[inherit]', 'w-[88px] sm:w-27 md:w-[135px] ipad:w-24 lg:w-32 xl:w-28']}
+                        >
+                            <tr>
+                                <td className='w-14 text-xs'>1</td>
+                                <td className='line-clamp-2 w-[inherit]'>
+                                    <a href='/product/coffee' className='hover:text-orange-600 dark:hover:text-orange-300 transition-colors'>
+                                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                                    </a>
+                                </td>
+                                <td className='w-[88px] sm:w-27 md:w-[135px] ipad:w-24 lg:w-32 xl:w-28'>
+                                    20.2 هزار
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className='w-14 text-xs'>2</td>
+                                <td className='line-clamp-2 w-[inherit]'>
+                                    <a href='/product/coffee' className='hover:text-orange-600 dark:hover:text-orange-300 transition-colors'>
+                                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                                    </a>
+                                </td>
+                                <td className='w-[88px] sm:w-27 md:w-[135px] ipad:w-24 lg:w-32 xl:w-28'>
+                                    10.5 هزار
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className='w-14 text-xs'>3</td>
+                                <td className='line-clamp-2 w-[inherit]'>
+                                    <a href='/product/coffee' className='hover:text-orange-600 dark:hover:text-orange-300 transition-colors'>
+                                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                                    </a>
+                                </td>
+                                <td className='w-[88px] sm:w-27 md:w-[135px] ipad:w-24 lg:w-32 xl:w-28'>
+                                    4.9 هزار
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className='w-14 text-xs'>4</td>
+                                <td className='line-clamp-2 w-[inherit]'>
+                                    <a href='/product/coffee' className='hover:text-orange-600 dark:hover:text-orange-300 transition-colors'>
+                                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                                    </a>
+                                </td>
+                                <td className='w-[88px] sm:w-27 md:w-[135px] ipad:w-24 lg:w-32 xl:w-28'>
+                                    1 هزار
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className='w-14 text-xs'>5</td>
+                                <td className='line-clamp-2 w-[inherit]'>
+                                    <a href='/product/coffee' className='hover:text-orange-600 dark:hover:text-orange-300 transition-colors'>
+                                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                                    </a>
+                                </td>
+                                <td className='w-[88px] sm:w-27 md:w-[135px] ipad:w-24 lg:w-32 xl:w-28'>
+                                    628
+                                </td>
+                            </tr>
+                        </DataTable>
+                    </AdminPanelTableTitle>
                 </div>
             </section>
         </>
