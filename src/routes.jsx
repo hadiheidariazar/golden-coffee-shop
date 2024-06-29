@@ -4,7 +4,7 @@ import Blogs from "./Pages/Blogs/Blogs";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
-import Order from "./Pages/Order/Order";
+import OrderConfirm from "./Pages/OrderConfirm/OrderConfirm";
 import ProductInfo from "./Pages/ProductInfo/ProductInfo";
 import Register from "./Pages/Register/Register";
 import Shop from "./Pages/Shop/Shop";
@@ -20,7 +20,7 @@ const routes = [
     {path: "/blogs", element: <Blogs />},
     {path: "/about-us", element: <AboutUs />},
     {path: "/contact-us", element: <ContactUs />},
-    {path: "/order", element: <Order />},
+    {path: "/order", element: <OrderConfirm />},
     {path: "/login", element: <Login />},
     {path: "/register", element: <Register />},
     {path: "/register", element: <Register />},
