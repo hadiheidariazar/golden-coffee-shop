@@ -2,8 +2,18 @@ import React from 'react'
 import TitlePage from '../../Components/TitlePage/TitlePage'
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
+import Swal from 'sweetalert2'
 
 export default function OrderConfirm() {
+
+  const showAlert = () => {
+    Swal.fire({
+      text: 'سفارش شما با موفقیت ثبت شد',
+      icon: 'success',
+      confirmButtonText: 'متوجه شدم!'
+    })
+  }
+
   return (
     <>
       <TitlePage title="ثبت سفارش" />
@@ -53,12 +63,59 @@ export default function OrderConfirm() {
                           <span className='text-xs tracking-tightest'> تومان </span>
                         </span>
                       </div>
-                      <button className='w-full btn-orange p-2 rounded'> ثبت سفارش </button>
+                      <button className='w-full btn-orange p-2 rounded' onClick={showAlert}> ثبت سفارش </button>
                     </div>
                   </form>
                 </div>
               </div>
-              
+              <div className='orders-container flex flex-col items-center gap-y-2 xs:gap-y-3 order-2 md:order-1'>
+                <div className="flex items-center gap-x-2 xs:gap-x-3 bg-white dark:bg-zinc-700 p-4 w-full rounded-md">
+                  <div className='w-1/3 xs:w-1/4 relative'>
+                    <img loading="lazy" src="/public/images/products/p1.png" alt='Product Image' className='w-full rounded' />
+                  </div>
+                  <div className='w-2/3 xs:w-3/4'>
+                    <div className='h-10 mb-1 xs:mb-2'>
+                      <h4 className='line-clamp-2 text-sm/5 xs:text-base/5'>
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                      </h4>
+                    </div>
+                    <div>
+                      <div>
+                        <p className='text-[11px] xs:text-sm md:text-[11px] ipad:text-xs text-red-500 dark:text-gray-300 line-through'> 200,000,000 </p>
+                        <p className='text-xs xs:text-sm font-bold md:text-xs ipad:text-sm text-green-600 dark:text-green-500'>
+                          200,000,000
+                          <span className='text-[10px]'> تومان </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-x-2 xs:gap-x-3 bg-white dark:bg-zinc-700 p-4 w-full rounded-md">
+                  <div className='w-1/3 xs:w-1/4 relative'>
+                    <img loading="lazy" src="/public/images/products/p1.png" alt='Product Image' className='w-full rounded' />
+                    <span className='absolute top-0 right-0 bg-orange-400 px-1.5 pt-0.5 text-white text-xs rounded-full'>6</span>
+                  </div>
+                  <div className='w-2/3 xs:w-3/4'>
+                    <div className='h-10 mb-1 xs:mb-2'>
+                      <h4 className='line-clamp-2 text-sm/5 xs:text-base/5'>
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                      </h4>
+                    </div>
+                    <div>
+                      <div>
+                        <p className='text-[11px] xs:text-sm md:text-[11px] ipad:text-xs text-red-500 dark:text-gray-300 line-through'> 200,000,000 </p>
+                        <p className='text-xs xs:text-sm font-bold md:text-xs ipad:text-sm text-green-600 dark:text-green-500'>
+                          200,000,000
+                          <span className='text-[10px]'> تومان </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
