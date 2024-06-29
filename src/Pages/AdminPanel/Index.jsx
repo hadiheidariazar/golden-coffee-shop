@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import AdminPanelSidebar from '../../Components/AdminPanelSidebar/AdminPanelSidebar'
+import toggleTheme from '../../Features/ToggleTheme/ToggleTheme'
+import { Outlet } from 'react-router-dom'
 
 export default function Index() {
 
@@ -37,9 +39,52 @@ export default function Index() {
                             </div>
                             <AdminPanelSidebar setShow={setShowSidebar} />
                         </div>
+
+                        <div className='bg-white dark:bg-zinc-700 min-h-full p-5 ipad:rounded-lg'>
+                            <div className='flex justify-between items-center border-b-[1px] border-b-gray-200 dark:border-b-white/30 pb-5'>
+                                <div className='flex items-center gap-x-5'>
+                                    <div className='block ipad:hidden' onClick={() => setShowSidebar(true)}>
+                                        <svg className="w-7 h-7 text-zinc-700 dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path></svg>
+                                    </div>
+                                    <a href="/my-account" className="hidden sm:flex items-center gap-x-3">
+                                        <img src="/images/avatars/avatar10.png" alt="My Profile" className='rounded-full w-10 h-10 xs:w-12 xs:h-12' />
+                                        <h4 className='flex flex-wrap font-dana-medium text-xl tracking-tighter'>
+                                            هادی حیدری آذر
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div className='flex gap-x-3'>
+                                    <a href="/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-[39px] h-[39px] xs:w-[47px] xs:h-[47px] p-2 xs:p-2.5 bg-gray-400 text-white rounded-full">
+                                            <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                                            <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+                                        </svg>
+                                    </a>
+                                    <div onClick={toggleTheme}>
+                                        <svg className="block dark:hidden w-[39px] h-[39px] p-1.5 xs:p-2 xs:w-[47px] xs:h-[47px] text-gray-800 dark:text-white cursor-pointer border-2 border-gray-800 dark:border-white rounded-full" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                                            stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round"
+                                                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                                        </svg>
+                                        <svg className="hidden dark:block w-[39px] h-[39px] p-1.5 xs:p-2 xs:w-[47px] xs:h-[47px] text-gray-800 dark:text-white cursor-pointer border-2 border-gray-800 dark:border-white rounded-full" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                                            stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round"
+                                                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                                        </svg>
+                                    </div>
+                                    <a href='/my-account' className='block sm:hidden'>
+                                        <img src="/images/avatars/avatar10.png" alt="My Profile" className='rounded-full w-10 h-10 xs:w-12 xs:h-12' />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="content-my-page mt-7">
+                                <Outlet />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div className={`overlay ipad:hidden transition-all ${showSidebar ? "overlay-open" : "invisible opacity-0"}`} onClick={() => setShowSidebar(false)}></div>
         </section>
     )
 }

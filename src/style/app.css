@@ -3509,6 +3509,14 @@ table tbody tr:not(:first-child):is(.dark *) {
     -webkit-line-clamp: 3;
   }
 
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:h-\[60px\] {
     height: 60px;
   }
