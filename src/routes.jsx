@@ -15,6 +15,7 @@ import Orders from "./Pages/UserPanel/Orders/Orders";
 import Tickets from "./Pages/UserPanel/Tickets/Tickets";
 import AdminPanel from './Pages/AdminPanel/Index'
 import MainPage from "./Pages/AdminPanel/MainPage/MainPage";
+import AdminPanelCategories from "./Pages/AdminPanel/Categories/Categories";
 
 const routes = [
     { path: "/", element: <Home /> },
@@ -39,7 +40,8 @@ const routes = [
     },
     {
         path: "/admin-panel/*", element: <AdminPanel />, children: [
-            { path: '', element: <MainPage /> }
+            { path: '', element: <MainPage /> },
+            { path: 'categories', element: <AdminPanelCategories /> },
         ]
     }
 ]
