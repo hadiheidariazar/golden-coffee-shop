@@ -90,7 +90,6 @@ export default function AccountDetails() {
                     showModalState={showModalProfileChange}
                     setShowModalState={setShowModalProfileChange}
                     title="پروفایل شما"
-                    topSpace='top-[27%]'
                 >
                     <div className='avatar-container grid grid-cols-4 xs:grid-cols-6 gap-2 h-[210px] overflow-y-auto'>
                         {

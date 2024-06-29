@@ -371,7 +371,6 @@ export default function ProductInfo() {
                     showModalState={showReplyCommentModal}
                     setShowModalState={setShowReplyCommentModal}
                     title="پاسخ شما"
-                    topSpace='top-[28%]'
                 >
                     <div>
                         <label htmlFor="reply-comment-input" className='text-sm'> متن پاسخ شما </label>

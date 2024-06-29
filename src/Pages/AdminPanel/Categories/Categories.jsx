@@ -80,8 +80,7 @@ export default function Categories() {
                     <DataTable
                         headerItemCount={3}
                         headerItemTitle={['عنوان', 'ویرایش', 'حذف']}
-                        breakPoint='w-[400px] xs:w-full xs:pe-0'
-                        setionsTableWidth={['w-[inherit]', 'w-20 sm:w-27 md:w-[135px] ipad:w-24 lg:w-32 xl:w-40', 'w-20 sm:w-27 md:w-[135px] ipad:w-24 lg:w-32 xl:w-40']}
+                        sectionsTableWidth={['w-[inherit]', 'w-20 sm:w-27 md:w-[135px] ipad:w-24 lg:w-32 xl:w-40', 'w-20 sm:w-27 md:w-[135px] ipad:w-24 lg:w-32 xl:w-40']}
                     >
                         <tr>
                             <td className='w-14 text-xs'>1</td>
@@ -148,7 +147,6 @@ export default function Categories() {
                         showModalState={showEditCategoryModal}
                         setShowModalState={setShowEditCategoryModal}
                         title='تغییر اطلاعات دسته بندی'
-                        topSpace='top-[14%]'
                     >
                         <form onSubmit={event => event.preventDefault()} className='grid items-center grid-cols-1 gap-4'>
                             <div className='space-y-1'>

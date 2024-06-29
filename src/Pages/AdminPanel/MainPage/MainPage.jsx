@@ -110,8 +110,7 @@ export default function MainPage() {
                         <DataTable
                             headerItemCount={2}
                             headerItemTitle={['نام کاربر', 'تاریخ']}
-                            breakPoint='w-[400px] xs:w-full xs:pe-0'
-                            setionsTableWidth={['w-[inherit]', 'w-16 sm:w-20']}
+                            sectionsTableWidth={['w-[inherit]', 'w-16 sm:w-20']}
                         >
                             <tr>
                                 <td className='w-14 text-xs'>1</td>
@@ -147,8 +146,7 @@ export default function MainPage() {
                         <DataTable
                             headerItemCount={2}
                             headerItemTitle={['عنوان کالا', 'تعداد فروش']}
-                            breakPoint='w-[400px] xs:w-full xs:pe-0'
-                            setionsTableWidth={['w-[inherit]', 'w-[88px] sm:w-27 md:w-[135px] ipad:w-24 lg:w-32 xl:w-28']}
+                            sectionsTableWidth={['w-[inherit]', 'w-[88px] sm:w-27 md:w-[135px] ipad:w-24 lg:w-32 xl:w-28']}
                         >
                             <tr>
                                 <td className='w-14 text-xs'>1</td>
