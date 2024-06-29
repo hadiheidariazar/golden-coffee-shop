@@ -1,8 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TitlePage from '../../../Components/TitlePage/TitlePage'
 import CounterBox from '../../../Components/CounterBox/CounterBox'
+import Datas from '../SellAndProfitDatas.js'
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+import AdminPanelTableTitle from '../../../Components/AdminPanelTableTitle/AdminPanelTableTitle'
 
 export default function MainPage() {
+
+    const [sellAndProfitDatas, setSellAndProfitDatas] = useState(Datas)
+    const [opacity, setOpacity] = useState({ profit: 1, sell: 1 });
+
+    const CustomTooltip = ({ active, payload, label }) => {
+        if (active) {
+            return (
+                <div className='bg-white dark:bg-zinc-700 border-[1px] border-gray-300 dark:border-zinc-500 shadow-lg py-2 px-3 rounded-md'>
+                    <p className='mb-1'>{label}</p>
+                    <p className='text-rose-600 dark:text-rose-500'>{`${payload[0].dataKey}: %${payload[0].value}`}</p>
+                    <p className='text-emerald-600 dark:text-emerald-500'>{`${payload[1].dataKey}: %${payload[1].value}`}</p>
+                </div>
+            );
+        }
+
+        return null;
+    };
+
+    const CustomXTick = ({ x, y, payload }) => {
+        return (
+            <text x={(x + 15)} y={(y + 15)}>
+                <tspan className='fill-zinc-700 dark:fill-white'>{payload.value}</tspan>
+            </text>
+        );
+    };
+
+    const CustomYTick = ({ x, y, payload }) => {
+        return (
+            <text x={(x + 1)} y={y + 3}>
+                <tspan className='fill-zinc-700 dark:fill-white'>{payload.value}</tspan>
+            </text>
+        );
+    };
+
     return (
         <>
             <TitlePage title="صفحه اصلی پنل مدیریت" />
@@ -43,6 +80,26 @@ export default function MainPage() {
                             </svg>
                         </CounterBox>
                     </nav>
+                </div>
+                <div className='chart mt-8'>
+                    <AdminPanelTableTitle
+                        title="میزان فروش و سود"
+                        isList={true}
+                        breakPoint='w-[980px] md:w-full'
+                    >
+                        <ResponsiveContainer height={300}>
+                            <LineChart
+                                data={sellAndProfitDatas}
+                            >
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis dataKey="name" tick={<CustomXTick />} />
+                                <YAxis tick={<CustomYTick />} />
+                                <Tooltip content={<CustomTooltip />} />
+                                <Line type="monotone" dataKey="فروش" strokeOpacity={opacity.profit} stroke="#ef4444" activeDot={{ r: 8 }} />
+                                <Line type="monotone" dataKey="سود" strokeOpacity={opacity.sell} stroke="#10b981" />
+                            </LineChart>
+                        </ResponsiveContainer>
+                    </AdminPanelTableTitle>
                 </div>
             </section>
         </>
