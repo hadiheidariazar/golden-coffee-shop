@@ -13,6 +13,7 @@ import Counter from "./Pages/UserPanel/Counter/Counter";
 import UserPanel from "./Pages/UserPanel/Index";
 import Orders from "./Pages/UserPanel/Orders/Orders";
 import Tickets from "./Pages/UserPanel/Tickets/Tickets";
+import AdminPanel from './Pages/AdminPanel/Index'
 
 const routes = [
     {path: "/", element: <Home />},
@@ -33,6 +34,7 @@ const routes = [
         {path: "tickets", element: <Tickets />},
         {path: "details", element: <AccountDetails />},
     ]},
+    {path: "/admin-panel/*", element: <AdminPanel />}
 ]
 
 export default routes
