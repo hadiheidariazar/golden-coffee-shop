@@ -820,6 +820,18 @@ table tbody tr:not(:first-child):is(.dark *) {
   top: 2.25rem;
 }
 
+.top-\[12\%\] {
+  top: 12%;
+}
+
+.top-\[15\%\] {
+  top: 15%;
+}
+
+.top-\[27\%\] {
+  top: 27%;
+}
+
 .top-\[60\%\] {
   top: 60%;
 }
@@ -832,8 +844,76 @@ table tbody tr:not(:first-child):is(.dark *) {
   top: 100%;
 }
 
-.z-10 {
-  z-index: 10;
+.top-\[30\%\] {
+  top: 30%;
+}
+
+.top-\[3\%\] {
+  top: 3%;
+}
+
+.top-\[28\%\] {
+  top: 28%;
+}
+
+.top-\[25\%\] {
+  top: 25%;
+}
+
+.top-\[50\%\] {
+  top: 50%;
+}
+
+.top-\[70\%\] {
+  top: 70%;
+}
+
+.top-\[100\%\] {
+  top: 100%;
+}
+
+.top-\[99\%\] {
+  top: 99%;
+}
+
+.top-\[\%\] {
+  top: %;
+}
+
+.top-\[1\%\] {
+  top: 1%;
+}
+
+.top-\[40\%\] {
+  top: 40%;
+}
+
+.top-\[5\%\] {
+  top: 5%;
+}
+
+.top-\[58\%\] {
+  top: 58%;
+}
+
+.top-\[55\%\] {
+  top: 55%;
+}
+
+.top-\[54\%\] {
+  top: 54%;
+}
+
+.top-\[56\%\] {
+  top: 56%;
+}
+
+.top-\[18\%\] {
+  top: 18%;
+}
+
+.top-\[14\%\] {
+  top: 14%;
 }
 
 .z-20 {
@@ -1676,6 +1756,12 @@ table tbody tr:not(:first-child):is(.dark *) {
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1710,18 +1796,6 @@ table tbody tr:not(:first-child):is(.dark *) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
-
-.space-y-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0px * var(--tw-space-y-reverse));
-}
-
-.space-y-1 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]) {
@@ -2080,11 +2154,6 @@ table tbody tr:not(:first-child):is(.dark *) {
 .bg-zinc-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
-}
-
-.bg-red-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
 .bg-blog-header {
@@ -2754,12 +2823,6 @@ table tbody tr:not(:first-child):is(.dark *) {
   transition-duration: 150ms;
 }
 
-@media screen and (min-width: 1024px) {
-  .child\:dark > *html .products-section {
-    background-image: url("/images/product-bg.png");
-  }
-}
-
 .placeholder\:text-gray-400::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -2922,14 +2985,6 @@ table tbody tr:not(:first-child):is(.dark *) {
   display: flex;
 }
 
-.child\:h-10 > * {
-  height: 2.5rem;
-}
-
-.child\:h-8 > * {
-  height: 2rem;
-}
-
 .child\:h-9 > * {
   height: 2.25rem;
 }
@@ -2955,26 +3010,10 @@ table tbody tr:not(:first-child):is(.dark *) {
        column-gap: 0.5rem;
 }
 
-.child\:gap-y-2 > * {
-  row-gap: 0.5rem;
-}
-
 .child\:space-y-2 > * > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-}
-
-.child\:space-y-0 > * > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0px * var(--tw-space-y-reverse));
-}
-
-.child\:space-y-1 > * > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
 .child\:rounded > * {
@@ -3046,14 +3085,14 @@ table tbody tr:not(:first-child):is(.dark *) {
   letter-spacing: -0.065em;
 }
 
-.child\:text-zinc-800 > * {
-  --tw-text-opacity: 1;
-  color: rgb(39 39 42 / var(--tw-text-opacity));
-}
-
 .child\:text-white > * {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.child\:text-zinc-800 > * {
+  --tw-text-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity));
 }
 
 .child\:transition-all > * {
