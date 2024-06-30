@@ -170,7 +170,7 @@ export default function Messages() {
                         sectionsTableWidth={['w-52 sm:w-72 md:w-80 ipad:w-80 xl:w-[450px]', 'w-10 sm:w-12 lg:w-16 xl:w-20', 'w-10 sm:w-12 lg:w-16 xl:w-20', 'w-9 sm:w-12 lg:w-16 xl:w-20']}
                     >
                         <tr>
-                            <td className='w-12 md:w-14 text-xs text-white'>1</td>
+                            <td className='w-12 md:w-14 text-xs'>1</td>
                             <td className='line-clamp-2 w-52 sm:w-72 md:w-80 ipad:w-80 xl:w-[450px]'>
                                 هادی حیدری آذر
                             </td>
@@ -185,7 +185,7 @@ export default function Messages() {
                             </td>
                         </tr>
                         <tr>
-                            <td className='w-12 md:w-14 text-xs text-white'>2</td>
+                            <td className='w-12 md:w-14 text-xs'>2</td>
                             <td className='line-clamp-2 w-52 sm:w-72 md:w-80 ipad:w-80 xl:w-[450px]'>
                                 هادی حیدری آذر
                             </td>
@@ -200,7 +200,7 @@ export default function Messages() {
                             </td>
                         </tr>
                         <tr>
-                            <td className='w-12 md:w-14 text-xs text-white'>3</td>
+                            <td className='w-12 md:w-14 text-xs'>3</td>
                             <td className='line-clamp-2 w-52 sm:w-72 md:w-80 ipad:w-80 xl:w-[450px]'>
                                 هادی حیدری آذر
                             </td>
