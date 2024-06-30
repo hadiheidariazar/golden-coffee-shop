@@ -146,7 +146,7 @@ export default function Categories() {
                     <Modal
                         showModalState={showEditCategoryModal}
                         setShowModalState={setShowEditCategoryModal}
-                        title='تغییر اطلاعات دسته بندی'
+                        title='ویرایش دسته بندی'
                     >
                         <form onSubmit={event => event.preventDefault()} className='grid items-center grid-cols-1 gap-4'>
                             <div className='space-y-1'>

@@ -1391,6 +1391,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   width: 2rem;
 }
 
+.w-9 {
+  width: 2.25rem;
+}
+
 .w-\[150px\] {
   width: 150px;
 }
@@ -1462,10 +1466,6 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .w-px {
   width: 1px;
-}
-
-.w-9 {
-  width: 2.25rem;
 }
 
 .min-w-27 {
@@ -3765,6 +3765,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 2.5rem;
   }
 
+  .sm\:w-12 {
+    width: 3rem;
+  }
+
   .sm\:w-20 {
     width: 5rem;
   }
@@ -3775,6 +3779,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .sm\:w-48 {
     width: 12rem;
+  }
+
+  .sm\:w-72 {
+    width: 18rem;
   }
 
   .sm\:w-\[500px\] {
@@ -3795,14 +3803,6 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .sm\:w-px {
     width: 1px;
-  }
-
-  .sm\:w-72 {
-    width: 18rem;
-  }
-
-  .sm\:w-12 {
-    width: 3rem;
   }
 
   .sm\:max-w-64 {
@@ -4117,6 +4117,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 3.5rem;
   }
 
+  .md\:w-16 {
+    width: 4rem;
+  }
+
   .md\:w-24 {
     width: 6rem;
   }
@@ -4131,6 +4135,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .md\:w-64 {
     width: 16rem;
+  }
+
+  .md\:w-72 {
+    width: 18rem;
   }
 
   .md\:w-80 {
@@ -4392,6 +4400,14 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 20%;
   }
 
+  .ipad\:w-10 {
+    width: 2.5rem;
+  }
+
+  .ipad\:w-11 {
+    width: 2.75rem;
+  }
+
   .ipad\:w-12 {
     width: 3rem;
   }
@@ -4416,20 +4432,20 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 80%;
   }
 
-  .ipad\:w-9\/12 {
-    width: 75%;
-  }
-
-  .ipad\:w-96 {
-    width: 24rem;
-  }
-
-  .ipad\:w-\[90\%\] {
-    width: 90%;
+  .ipad\:w-7 {
+    width: 1.75rem;
   }
 
   .ipad\:w-80 {
     width: 20rem;
+  }
+
+  .ipad\:w-9\/12 {
+    width: 75%;
+  }
+
+  .ipad\:w-\[90\%\] {
+    width: 90%;
   }
 
   .ipad\:max-w-48 {
