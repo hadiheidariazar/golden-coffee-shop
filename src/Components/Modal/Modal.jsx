@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function Modal({ showModalState, setShowModalState, title, children }) {
 
-    showModalState ? document.body.classList.add('overflow-y-hidden') : document.body.classList.remove('overflow-y-hidden')
+    useEffect(() => {
+        showModalState ? document.body.classList.add('overflow-y-hidden') : document.body.classList.remove('overflow-y-hidden')
+    }, [showModalState])
 
     return (
         <div className={`fixed flex justify-center items-center inset-0 min-h-screen z-50 ${showModalState ? "visible opacity-100" : "invisible opacity-0"}`}>
