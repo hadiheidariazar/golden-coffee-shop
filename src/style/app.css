@@ -3789,6 +3789,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 12rem;
   }
 
+  .sm\:w-64 {
+    width: 16rem;
+  }
+
   .sm\:w-72 {
     width: 18rem;
   }
@@ -3809,24 +3813,12 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 97%;
   }
 
-  .sm\:w-\[\] {
-    width: ;
-  }
-
   .sm\:w-auto {
     width: auto;
   }
 
   .sm\:w-px {
     width: 1px;
-  }
-
-  .sm\:w-6 {
-    width: 1.5rem;
-  }
-
-  .sm\:w-64 {
-    width: 16rem;
   }
 
   .sm\:max-w-64 {
