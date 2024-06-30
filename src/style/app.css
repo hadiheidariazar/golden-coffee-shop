@@ -3773,8 +3773,16 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 5rem;
   }
 
+  .sm\:w-24 {
+    width: 6rem;
+  }
+
   .sm\:w-27 {
     width: 6.25rem;
+  }
+
+  .sm\:w-44 {
+    width: 11rem;
   }
 
   .sm\:w-48 {
@@ -3783,6 +3791,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .sm\:w-72 {
     width: 18rem;
+  }
+
+  .sm\:w-9 {
+    width: 2.25rem;
   }
 
   .sm\:w-\[500px\] {
@@ -3797,6 +3809,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 97%;
   }
 
+  .sm\:w-\[\] {
+    width: ;
+  }
+
   .sm\:w-auto {
     width: auto;
   }
@@ -3805,24 +3821,12 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 1px;
   }
 
-  .sm\:w-24 {
-    width: 6rem;
+  .sm\:w-6 {
+    width: 1.5rem;
   }
 
-  .sm\:w-44 {
-    width: 11rem;
-  }
-
-  .sm\:w-8 {
-    width: 2rem;
-  }
-
-  .sm\:w-9 {
-    width: 2.25rem;
-  }
-
-  .sm\:w-11 {
-    width: 2.75rem;
+  .sm\:w-64 {
+    width: 16rem;
   }
 
   .sm\:max-w-64 {
@@ -4149,12 +4153,12 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 1rem;
   }
 
-  .md\:w-52 {
-    width: 13rem;
-  }
-
   .md\:w-6 {
     width: 1.5rem;
+  }
+
+  .md\:w-60 {
+    width: 15rem;
   }
 
   .md\:w-64 {
@@ -4195,14 +4199,6 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:w-60 {
-    width: 15rem;
-  }
-
-  .md\:w-40 {
-    width: 10rem;
   }
 
   .md\:max-w-\[420px\] {
@@ -4698,6 +4694,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .xl\:w-72 {
     width: 18rem;
+  }
+
+  .xl\:w-80 {
+    width: 20rem;
   }
 
   .xl\:w-96 {

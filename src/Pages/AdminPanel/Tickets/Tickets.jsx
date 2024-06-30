@@ -9,6 +9,7 @@ export default function Tickets() {
 
   const [showTicketDescriptionModal, setShowTicketDescriptionModal] = useState(false)
   const [showTicketReplyModal, setShowTicketReplyModal] = useState(false)
+  const [showTicketReplyTextModal, setShowTicketReplyTextModal] = useState(false)
 
   const showTicketReplyAlert = () => {
     Swal.fire({
@@ -31,6 +32,24 @@ export default function Tickets() {
       if (res.isConfirmed) {
         Swal.fire({
           text: 'تیکت مورد نظر با موفقیت حذف شد',
+          icon: 'success',
+          confirmButtonText: 'متوجه شدم!',
+        })
+      }
+    })
+  }
+
+  const showRemoveTicketReplyAlert = () => {
+    Swal.fire({
+      text: 'آیا از حذف پاسخ مورد نظر مطمئن هستی؟',
+      icon: 'question',
+      confirmButtonText: 'بله',
+      showCancelButton: true,
+      cancelButtonText: 'خیر'
+    }).then(res => {
+      if (res.isConfirmed) {
+        Swal.fire({
+          text: 'پاسخ مورد نظر با موفقیت حذف شد',
           icon: 'success',
           confirmButtonText: 'متوجه شدم!',
         })
@@ -195,6 +214,72 @@ export default function Tickets() {
               <button className='bg-green-500 hover:bg-green-600' onClick={showTicketReplyAlert}> ارسال پاسخ </button>
               <button className='bg-rose-500 hover:bg-rose-600' onClick={() => setShowTicketReplyModal(false)}> لغو </button>
             </div>
+          </div>
+        </Modal>
+      </section>
+      <section className='ticket-replies-container mt-8'>
+        <AdminPanelTableTitle
+          title='پاسخ ها'
+          isList={true}
+        >
+          <DataTable
+            headerItemCount={5}
+            headerItemTitle={['کاربر', 'موضوع', 'متن', "پاسخ", 'حذف']}
+            sectionsTableWidth={['w-36 sm:w-64 md:w-80 lg:w-80 xl:w-80', 'w-10 sm:w-12 md:w-14 ipad:w-12 lg:w-14 xl:w-16', 'w-10 sm:w-10 md:w-14 ipad:w-7 lg:w-14 xl:w-16', 'w-10 sm:w-12 md:w-14 ipad:w-12 lg:w-14 xl:w-16', 'w-8 sm:w-10 md:w-14 ipad:w-11 lg:w-14 xl:w-14']}
+          >
+            <tr>
+              <td className='w-12 md:w-14 text-xs'>1</td>
+              <td className='line-clamp-2 w-36 sm:w-64 md:w-80 lg:w-80 xl:w-80'>
+                هادی حیدری آذر
+              </td>
+              <td className='w-10 sm:w-12 md:w-14 ipad:w-12 lg:w-14 xl:w-16'>
+                <button className='bg-blue-500 hover:bg-blue-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showTicketTopicAlert}> مشاهده </button>
+              </td>
+              <td className='w-10 sm:w-12 md:w-14 ipad:w-12 lg:w-14 xl:w-16'>
+                <button className='bg-blue-500 hover:bg-blue-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowTicketDescriptionModal(true)}> مشاهده </button>
+              </td>
+              <td className='w-10 sm:w-12 md:w-14 ipad:w-12 lg:w-14 xl:w-16'>
+                <button className='bg-green-500 hover:bg-green-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowTicketReplyTextModal(true)}> مشاهده </button>
+              </td>
+              <td className='w-8 sm:w-10 md:w-14 ipad:w-11 lg:w-14 xl:w-14'>
+                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showRemoveTicketReplyAlert}> حذف </button>
+              </td>
+            </tr>
+            <tr>
+              <td className='w-12 md:w-14 text-xs'>2</td>
+              <td className='line-clamp-2 w-36 sm:w-64 md:w-80 lg:w-80 xl:w-80'>
+                هادی حیدری آذر
+              </td>
+              <td className='w-10 sm:w-12 md:w-14 ipad:w-12 lg:w-14 xl:w-16'>
+                <button className='bg-blue-500 hover:bg-blue-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showTicketTopicAlert}> مشاهده </button>
+              </td>
+              <td className='w-10 sm:w-12 md:w-14 ipad:w-12 lg:w-14 xl:w-16'>
+                <button className='bg-blue-500 hover:bg-blue-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowTicketDescriptionModal(true)}> مشاهده </button>
+              </td>
+              <td className='w-10 sm:w-12 md:w-14 ipad:w-12 lg:w-14 xl:w-16'>
+                <button className='bg-green-500 hover:bg-green-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowTicketReplyTextModal(true)}> مشاهده </button>
+              </td>
+              <td className='w-8 sm:w-10 md:w-14 ipad:w-11 lg:w-14 xl:w-14'>
+                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showRemoveTicketReplyAlert}> حذف </button>
+              </td>
+            </tr>
+          </DataTable>
+        </AdminPanelTableTitle>
+
+        <Modal
+          showModalState={showTicketReplyTextModal}
+          setShowModalState={setShowTicketReplyTextModal}
+          title='متن پاسخ'
+        >
+          <div className='space-y-4'>
+            <div className='min-h-max max-h-60 overflow-y-auto'>
+              <p>
+                سلام
+                <br />
+                ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم. می‌پنداریم که نظر مردم ایران و منطقه باید نسبت به کالای ایرانی بهبود یابد و در این راستا با اشتیاق می‌کوشیم.
+              </p>
+            </div>
+            <button className='w-full bg-green-500 hover:bg-green-600 text-white p-1 rounded transition-colors' onClick={() => setShowTicketReplyTextModal(false)}> مشاهده کردم </button>
           </div>
         </Modal>
       </section>
