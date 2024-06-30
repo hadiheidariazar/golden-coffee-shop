@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import TitlePage from '../../../Components/TitlePage/TitlePage'
 import AdminPanelTableTitle from '../../../Components/AdminPanelTableTitle/AdminPanelTableTitle'
 import Swal from 'sweetalert2'
+import DataTable from '../../../Components/DataTable/DataTable'
+import Modal from '../../../Components/Modal/Modal'
 
 export default function Users() {
 
     const [showPassword, setShowPassword] = useState(false)
+    const [showEditUserModal, setShowEditUserModal] = useState(false)
 
     const showAddNewUserAlert = () => {
         Swal.fire({
@@ -13,6 +16,88 @@ export default function Users() {
             icon: 'success',
             confirmButtonText: 'متوجه شدم!'
         })
+    }
+
+    const showEditUserAlert = () => {
+        Swal.fire({
+            text: 'کاربر مورد نظر با موفقیت ویرایش شد',
+            icon: 'success',
+            confirmButtonText: 'متوجه شدم!'
+        })
+
+        setShowEditUserModal(false)
+    }
+
+    const showBanUserAlert = () => {
+        Swal.fire({
+            text: 'آیا از بن کردن کاربر مورد نظر مطمئن هستی؟',
+            icon: 'question',
+            confirmButtonText: 'بله',
+            showCancelButton: true,
+            cancelButtonText: 'خیر'
+        }).then(res => {
+            if (res.isConfirmed) {
+                Swal.fire({
+                    text: 'کاربر مورد نظر با موفقیت بن شد',
+                    icon: 'success',
+                    confirmButtonText: 'متوجه شدم!'
+                })
+            }
+        })
+    }
+
+    const showRemoveUserAlert = () => {
+        Swal.fire({
+            text: 'آیا از حذف کاربر مورد نظر مطمئن هستی؟',
+            icon: 'question',
+            confirmButtonText: 'بله',
+            showCancelButton: true,
+            cancelButtonText: 'خیر'
+        }).then(res => {
+            if (res.isConfirmed) {
+                Swal.fire({
+                    text: 'کاربر مورد نظر با موفقیت حذف شد',
+                    icon: 'success',
+                    confirmButtonText: 'متوجه شدم!',
+                })
+            }
+        })
+    }
+
+    const showChangeAccessAlert = (type) => {
+        if (type.toLocaleLowerCase() === 'admin') {
+            Swal.fire({
+                text: 'آیا از ارتقای نقش کاربر مورد نظر به مدیر مطمئن هستی؟',
+                icon: 'question',
+                confirmButtonText: 'بله',
+                showCancelButton: true,
+                cancelButtonText: 'خیر'
+            }).then(res => {
+                if (res.isConfirmed) {
+                    Swal.fire({
+                        text: 'کاربر مورد نظر با موفقیت به نقش مدیر ارتقا یافت',
+                        icon: 'success',
+                        confirmButtonText: 'متوجه شدم!',
+                    })
+                }
+            })
+        } else {
+            Swal.fire({
+                text: 'آیا از تنزل نقش مدیر مورد نظر به کاربر مطمئن هستی؟',
+                icon: 'question',
+                confirmButtonText: 'بله',
+                showCancelButton: true,
+                cancelButtonText: 'خیر'
+            }).then(res => {
+                if (res.isConfirmed) {
+                    Swal.fire({
+                        text: 'مدیر مورد نظر با موفقیت به نقش کاربر تنزل یافت',
+                        icon: 'success',
+                        confirmButtonText: 'متوجه شدم!',
+                    })
+                }
+            })
+        }
     }
 
     return (
@@ -70,6 +155,153 @@ export default function Users() {
                         </div>
                     </form>
                 </AdminPanelTableTitle>
+            </section>
+            <section className='users-container mt-8'>
+                <AdminPanelTableTitle
+                    title='کاربران'
+                    isList={true}
+                >
+                    <DataTable
+                        headerItemCount={6}
+                        headerItemTitle={['نام', "شماره تماس", 'ویرایش', 'ارتقای نقش', "حذف", 'بن']}
+                        sectionsTableWidth={['w-32 sm:w-40 md:w-60 lg:w-64 xl:w-72', 'w-20 sm:w-24 lg:w-28 xl:w-36', 'w-10 sm:w-12 md:w-14 xl:w-16', 'w-[69px] sm:w-20', 'w-7 sm:w-9 md:w-14 ipad:w-9 lg:w-14', 'w-5 sm:w-7']}
+                    >
+                        <tr>
+                            <td className='w-12 md:w-14 text-xs'>1</td>
+                            <td className='line-clamp-2 w-32 sm:w-40 md:w-60 lg:w-64 xl:w-72'>
+                                هادی حیدری آذر
+                            </td>
+                            <td className='line-clamp-2 w-20 sm:w-24 lg:w-28 xl:w-36'>
+                                09123456789
+                            </td>
+                            <td className='w-10 sm:w-12 md:w-14 xl:w-16'>
+                                <button className='bg-green-500 hover:bg-green-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowEditUserModal(true)}> ویرایش </button>
+                            </td>
+                            <td className='w-[69px] sm:w-20'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => showChangeAccessAlert('user')}> تنزل به کاربر </button>
+                            </td>
+                            <td className='w-7 sm:w-9 md:w-14 ipad:w-9 lg:w-14'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showRemoveUserAlert}> حذف </button>
+                            </td>
+                            <td className='w-5 sm:w-7'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showBanUserAlert}> بن </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className='w-12 md:w-14 text-xs'>2</td>
+                            <td className='line-clamp-2 w-32 sm:w-40 md:w-60 lg:w-64 xl:w-72'>
+                                فاطمه محمدی
+                            </td>
+                            <td className='line-clamp-2 w-20 sm:w-24 lg:w-28 xl:w-36'>
+                                09123456789
+                            </td>
+                            <td className='w-10 sm:w-12 md:w-14 xl:w-16'>
+                                <button className='bg-green-500 hover:bg-green-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowEditUserModal(true)}> ویرایش </button>
+                            </td>
+                            <td className='w-[69px] sm:w-20'>
+                                <button className='bg-blue-500 hover:bg-blue-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => showChangeAccessAlert('admin')}> ارتقا به مدیر </button>
+                            </td>
+                            <td className='w-7 sm:w-9 md:w-14 ipad:w-9 lg:w-14'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showRemoveUserAlert}> حذف </button>
+                            </td>
+                            <td className='w-5 sm:w-7'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showBanUserAlert}> بن </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className='w-12 md:w-14 text-xs'>3</td>
+                            <td className='line-clamp-2 w-32 sm:w-40 md:w-60 lg:w-64 xl:w-72'>
+                                پوریا عزیزی
+                            </td>
+                            <td className='line-clamp-2 w-20 sm:w-24 lg:w-28 xl:w-36'>
+                                09123456789
+                            </td>
+                            <td className='w-10 sm:w-12 md:w-14 xl:w-16'>
+                                <button className='bg-green-500 hover:bg-green-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowEditUserModal(true)}> ویرایش </button>
+                            </td>
+                            <td className='w-[69px] sm:w-20'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => showChangeAccessAlert('user')}> تنزل به کاربر </button>
+                            </td>
+                            <td className='w-7 sm:w-9 md:w-14 ipad:w-9 lg:w-14'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showRemoveUserAlert}> حذف </button>
+                            </td>
+                            <td className='w-5 sm:w-7'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showBanUserAlert}> بن </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className='w-12 md:w-14 text-xs'>4</td>
+                            <td className='line-clamp-2 w-32 sm:w-40 md:w-60 lg:w-64 xl:w-72'>
+                                قدیر یلمه
+                            </td>
+                            <td className='line-clamp-2 w-20 sm:w-24 lg:w-28 xl:w-36'>
+                                09123456789
+                            </td>
+                            <td className='w-10 sm:w-12 md:w-14 xl:w-16'>
+                                <button className='bg-green-500 hover:bg-green-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowEditUserModal(true)}> ویرایش </button>
+                            </td>
+                            <td className='w-[69px] sm:w-20'>
+                                <button className='bg-blue-500 hover:bg-blue-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => showChangeAccessAlert('admin')}> ارتقا به مدیر </button>
+                            </td>
+                            <td className='w-7 sm:w-9 md:w-14 ipad:w-9 lg:w-14'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showRemoveUserAlert}> حذف </button>
+                            </td>
+                            <td className='w-5 sm:w-7'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showBanUserAlert}> بن </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className='w-12 md:w-14 text-xs'>5</td>
+                            <td className='line-clamp-2 w-32 sm:w-40 md:w-60 lg:w-64 xl:w-72'>
+                                محمد امین سعیدی راد
+                            </td>
+                            <td className='line-clamp-2 w-20 sm:w-24 lg:w-28 xl:w-36'>
+                                09123456789
+                            </td>
+                            <td className='w-10 sm:w-12 md:w-14 xl:w-16'>
+                                <button className='bg-green-500 hover:bg-green-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowEditUserModal(true)}> ویرایش </button>
+                            </td>
+                            <td className='w-[69px] sm:w-20'>
+                                <button className='bg-blue-500 hover:bg-blue-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => showChangeAccessAlert('admin')}> ارتقا به مدیر </button>
+                            </td>
+                            <td className='w-7 sm:w-9 md:w-14 ipad:w-9 lg:w-14'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showRemoveUserAlert}> حذف </button>
+                            </td>
+                            <td className='w-5 sm:w-7'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showBanUserAlert}> بن </button>
+                            </td>
+                        </tr>
+                    </DataTable>
+                </AdminPanelTableTitle>
+
+                <Modal
+                    showModalState={showEditUserModal}
+                    setShowModalState={setShowEditUserModal}
+                    title='ویرایش کاربر'
+                >
+                    <form onSubmit={event => event.preventDefault()} className='grid items-center grid-cols-1 gap-4'>
+                        <div className='space-y-1'>
+                            <label htmlFor='user-new-name' className='font-morabba-medium'> نام جدید </label>
+                            <input type='text' id='user-new-name' placeholder='نام جدید را وارد کنید...' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm" />
+                        </div>
+                        <div className='space-y-1'>
+                            <label htmlFor='user-new-username' className='font-morabba-medium'> نام کاربری جدید </label>
+                            <input type='text' id='user-new-username' placeholder='نام کاربری جدید را وارد کنید...' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm" />
+                        </div>
+                        <div className='space-y-1'>
+                            <label htmlFor='user-new-tel' className='font-morabba-medium'> شماره تماس جدید </label>
+                            <input type='tel' id='user-new-tel' placeholder='...شماره تماس جدید را وارد کنید' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm text-right" />
+                        </div>
+                        <div className='space-y-1'>
+                            <label htmlFor='user-new-email' className='font-morabba-medium'> ایمیل جدید </label>
+                            <input type='email' id='user-new-email' placeholder='ایمیل جدید را وارد کنید...' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm" />
+                        </div>
+                        <div className='flex items-center gap-2 child:w-full child:h-9 child:p-1 child:rounded child:text-white child:transition-colors'>
+                            <button className='bg-green-500 hover:bg-green-600' onClick={showEditUserAlert}> تغییر اطلاعات </button>
+                            <button className='bg-rose-500 hover:bg-rose-600 mt-0' onClick={() => setShowEditUserModal(false)}> لغو </button>
+                        </div>
+                    </form>
+                </Modal>
             </section>
         </>
     )
