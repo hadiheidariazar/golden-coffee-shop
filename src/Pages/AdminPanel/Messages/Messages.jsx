@@ -161,7 +161,7 @@ export default function Messages() {
             </section>
             <section className='message-replies-container mt-8'>
                 <AdminPanelTableTitle
-                    title='پاسخ های پیام ها'
+                    title='پاسخ ها'
                     isList={true}
                 >
                     <DataTable

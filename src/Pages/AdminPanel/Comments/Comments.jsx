@@ -9,6 +9,7 @@ export default function Comments() {
 
     const [showCommentModal, setShowCommentModal] = useState(false)
     const [showCommentReplyModal, setShowCommentReplyModal] = useState(false)
+    const [showCommentReplyTextModal, setShowCommentReplyTextModal] = useState(false)
     const [showEditCommentModal, setShowEditCommentModal] = useState(false)
 
     const showProductAlert = () => {
@@ -49,6 +50,24 @@ export default function Comments() {
             if (res.isConfirmed) {
                 Swal.fire({
                     text: 'دیدگاه مورد نظر با موفقیت حذف شد',
+                    icon: 'success',
+                    confirmButtonText: 'متوجه شدم!',
+                })
+            }
+        })
+    }
+
+    const showRemoveCommentReplyAlert = () => {
+        Swal.fire({
+            text: 'آیا از حذف پاسخ مورد نظر مطمئن هستی؟',
+            icon: 'question',
+            confirmButtonText: 'بله',
+            showCancelButton: true,
+            cancelButtonText: 'خیر'
+        }).then(res => {
+            if (res.isConfirmed) {
+                Swal.fire({
+                    text: 'پاسخ مورد نظر با موفقیت حذف شد',
                     icon: 'success',
                     confirmButtonText: 'متوجه شدم!',
                 })
@@ -202,6 +221,54 @@ export default function Comments() {
                             <button className='bg-rose-500 hover:bg-rose-600 mt-0' onClick={() => setShowEditCommentModal(false)}> لغو </button>
                         </div>
                     </form>
+                </Modal>
+            </section>
+            <section className='comment-replies-container mt-8'>
+                <AdminPanelTableTitle
+                    title='پاسخ ها'
+                    isList={true}
+                >
+                    <DataTable
+                        headerItemCount={5}
+                        headerItemTitle={['کاربر', "کالا", 'دیدگاه', 'پاسخ', 'حذف']}
+                        sectionsTableWidth={['w-32 sm:w-48 md:w-72 ipad:60 lg:w-80 xl:w-96', 'w-10 sm:w-12 md:w-14 ipad:w-10 lg:w-12 xl:w-14', 'w-10 sm:w-12 md:w-14 ipad:w-10 lg:w-12 xl:w-14', 'w-7 sm:w-10 md:w-14 ipad:w-7 lg:w-12 xl:w-14', 'w-8 sm:w-10 md:w-14 ipad:w-10 lg:w-12 xl:w-14']}
+                    >
+                        <tr>
+                            <td className='w-12 md:w-14 text-xs'>1</td>
+                            <td className='line-clamp-2 w-32 sm:w-48 md:w-72 ipad:60 lg:w-80 xl:w-96'>
+                                هادی حیدری آذر
+                            </td>
+                            <td className='w-10 sm:w-12 md:w-14 ipad:w-10 lg:w-12 xl:w-14'>
+                                <button className='bg-blue-500 hover:bg-blue-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showProductAlert}> مشاهده </button>
+                            </td>
+                            <td className='w-10 sm:w-12 md:w-14 ipad:w-10 lg:w-12 xl:w-14'>
+                                <button className='bg-blue-500 hover:bg-blue-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowCommentModal(true)}> مشاهده </button>
+                            </td>
+                            <td className='w-10 sm:w-12 md:w-14 ipad:w-10 lg:w-12 xl:w-14'>
+                                <button className='bg-blue-500 hover:bg-blue-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowCommentReplyTextModal(true)}> مشاهده </button>
+                            </td>
+                            <td className='w-8 sm:w-10 md:w-14 ipad:w-10 lg:w-12 xl:w-14'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showRemoveCommentReplyAlert}> حذف </button>
+                            </td>
+                        </tr>
+                    </DataTable>
+                </AdminPanelTableTitle>
+
+                <Modal
+                    showModalState={showCommentReplyTextModal}
+                    setShowModalState={setShowCommentReplyTextModal}
+                    title='متن پاسخ'
+                >
+                    <div className='space-y-4'>
+                        <div className='min-h-max max-h-60 overflow-y-auto'>
+                            <p>
+                                سلام
+                                <br />
+                                ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم. می‌پنداریم که نظر مردم ایران و منطقه باید نسبت به کالای ایرانی بهبود یابد و در این راستا با اشتیاق می‌کوشیم.
+                            </p>
+                        </div>
+                        <button className='w-full bg-green-500 hover:bg-green-600 text-white p-1 rounded transition-colors' onClick={() => setShowCommentReplyTextModal(false)}> مشاهده کردم </button>
+                    </div>
                 </Modal>
             </section>
         </>

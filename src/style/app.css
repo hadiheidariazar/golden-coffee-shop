@@ -1468,6 +1468,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   width: 1px;
 }
 
+.w-\[\] {
+  width: ;
+}
+
 .min-w-27 {
   min-width: 6.25rem;
 }
