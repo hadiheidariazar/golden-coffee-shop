@@ -19,6 +19,7 @@ import AdminPanelCategories from "./Pages/AdminPanel/Categories/Categories";
 import AdminPanelMessages from "./Pages/AdminPanel/Messages/Messages";
 import AdminPanelComments from "./Pages/AdminPanel/Comments/Comments";
 import AdminPanelTickets from "./Pages/AdminPanel/Tickets/Tickets";
+import AdminPanelUsers from "./Pages/AdminPanel/Users/Users";
 
 const routes = [
     { path: "/", element: <Home /> },
@@ -44,6 +45,7 @@ const routes = [
     {
         path: "/admin-panel/*", element: <AdminPanel />, children: [
             { path: '', element: <MainPage /> },
+            { path: 'users', element: <AdminPanelUsers /> },
             { path: 'comments', element: <AdminPanelComments /> },
             { path: 'messages', element: <AdminPanelMessages /> },
             { path: 'tickets', element: <AdminPanelTickets /> },
