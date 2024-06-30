@@ -820,22 +820,6 @@ table tbody tr:not(:first-child):is(.dark *) {
   top: 2.25rem;
 }
 
-.top-\[14\%\] {
-  top: 14%;
-}
-
-.top-\[20\%\] {
-  top: 20%;
-}
-
-.top-\[27\%\] {
-  top: 27%;
-}
-
-.top-\[28\%\] {
-  top: 28%;
-}
-
 .top-\[60\%\] {
   top: 60%;
 }
@@ -1278,8 +1262,8 @@ table tbody tr:not(:first-child):is(.dark *) {
   height: 100vh;
 }
 
-.max-h-40 {
-  max-height: 10rem;
+.max-h-60 {
+  max-height: 15rem;
 }
 
 .max-h-96 {
@@ -1294,29 +1278,17 @@ table tbody tr:not(:first-child):is(.dark *) {
   max-height: 100vh;
 }
 
-.max-h-60 {
-  max-height: 15rem;
-}
-
-.min-h-40 {
-  min-height: 10rem;
-}
-
 .min-h-full {
   min-height: 100%;
-}
-
-.min-h-screen {
-  min-height: 100vh;
-}
-
-.min-h-60 {
-  min-height: 15rem;
 }
 
 .min-h-max {
   min-height: -moz-max-content;
   min-height: max-content;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-1\/3 {
@@ -1492,6 +1464,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   width: 1px;
 }
 
+.w-9 {
+  width: 2.25rem;
+}
+
 .min-w-27 {
   min-width: 6.25rem;
 }
@@ -1561,10 +1537,6 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .resize-none {
   resize: none;
-}
-
-.resize {
-  resize: both;
 }
 
 .list-disc {
@@ -3825,6 +3797,14 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 1px;
   }
 
+  .sm\:w-72 {
+    width: 18rem;
+  }
+
+  .sm\:w-12 {
+    width: 3rem;
+  }
+
   .sm\:max-w-64 {
     max-width: 16rem;
   }
@@ -4153,6 +4133,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 16rem;
   }
 
+  .md\:w-80 {
+    width: 20rem;
+  }
+
   .md\:w-\[135px\] {
     width: 135px;
   }
@@ -4436,8 +4420,16 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 75%;
   }
 
+  .ipad\:w-96 {
+    width: 24rem;
+  }
+
   .ipad\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .ipad\:w-80 {
+    width: 20rem;
   }
 
   .ipad\:max-w-48 {
@@ -4539,6 +4531,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 3rem;
   }
 
+  .lg\:w-16 {
+    width: 4rem;
+  }
+
   .lg\:w-28 {
     width: 7rem;
   }
@@ -4620,6 +4616,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 3.5rem;
   }
 
+  .xl\:w-20 {
+    width: 5rem;
+  }
+
   .xl\:w-28 {
     width: 7rem;
   }
@@ -4634,6 +4634,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .xl\:w-96 {
     width: 24rem;
+  }
+
+  .xl\:w-\[450px\] {
+    width: 450px;
   }
 
   .xl\:max-w-\[550px\] {

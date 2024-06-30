@@ -9,6 +9,7 @@ export default function Messages() {
 
     const [showMessageModal, setShowMessageModal] = useState(false)
     const [showMessageReplyModal, setShowMessageReplyModal] = useState(false)
+    const [showMessageReplyTextModal, setShowMessageReplyTextModal] = useState(false)
 
     const showRemoveMessageAlert = () => {
         Swal.fire({
@@ -21,6 +22,24 @@ export default function Messages() {
             if (res.isConfirmed) {
                 Swal.fire({
                     text: 'پیام مورد نظر با موفقیت حذف شد',
+                    icon: 'success',
+                    confirmButtonText: 'متوجه شدم!',
+                })
+            }
+        })
+    }
+
+    const showRemoveMessageReplyAlert = () => {
+        Swal.fire({
+            text: 'آیا از حذف پاسخ مورد نظر مطمئن هستی؟',
+            icon: 'question',
+            confirmButtonText: 'بله',
+            showCancelButton: true,
+            cancelButtonText: 'خیر'
+        }).then(res => {
+            if (res.isConfirmed) {
+                Swal.fire({
+                    text: 'پاسخ مورد نظر با موفقیت حذف شد',
                     icon: 'success',
                     confirmButtonText: 'متوجه شدم!',
                 })
@@ -137,6 +156,81 @@ export default function Messages() {
                             <button className='bg-green-500 hover:bg-green-600' onClick={showMessageReplyAlert}> ارسال پاسخ </button>
                             <button className='bg-rose-500 hover:bg-rose-600' onClick={() => setShowMessageReplyModal(false)}> لغو </button>
                         </div>
+                    </div>
+                </Modal>
+            </section>
+            <section className='message-replies-container mt-8'>
+                <AdminPanelTableTitle
+                    title='پاسخ های پیام ها'
+                    isList={true}
+                >
+                    <DataTable
+                        headerItemCount={4}
+                        headerItemTitle={['نام', 'پیام', 'پاسخ', 'حذف']}
+                        sectionsTableWidth={['w-52 sm:w-72 md:w-80 ipad:w-80 xl:w-[450px]', 'w-10 sm:w-12 lg:w-16 xl:w-20', 'w-10 sm:w-12 lg:w-16 xl:w-20', 'w-9 sm:w-12 lg:w-16 xl:w-20']}
+                    >
+                        <tr>
+                            <td className='w-12 md:w-14 text-xs text-white'>1</td>
+                            <td className='line-clamp-2 w-52 sm:w-72 md:w-80 ipad:w-80 xl:w-[450px]'>
+                                هادی حیدری آذر
+                            </td>
+                            <td className='w-10 sm:w-12 lg:w-16 xl:w-20'>
+                                <button className='bg-blue-500 hover:bg-blue-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowMessageModal(true)}> مشاهده </button>
+                            </td>
+                            <td className='w-10 sm:w-12 lg:w-16 xl:w-20'>
+                                <button className='bg-green-500 hover:bg-green-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowMessageReplyTextModal(true)}> مشاهده </button>
+                            </td>
+                            <td className='w-9 sm:w-12 lg:w-16 xl:w-20'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showRemoveMessageReplyAlert}> حذف </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className='w-12 md:w-14 text-xs text-white'>2</td>
+                            <td className='line-clamp-2 w-52 sm:w-72 md:w-80 ipad:w-80 xl:w-[450px]'>
+                                هادی حیدری آذر
+                            </td>
+                            <td className='w-10 sm:w-12 lg:w-16 xl:w-20'>
+                                <button className='bg-blue-500 hover:bg-blue-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowMessageModal(true)}> مشاهده </button>
+                            </td>
+                            <td className='w-10 sm:w-12 lg:w-16 xl:w-20'>
+                                <button className='bg-green-500 hover:bg-green-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowMessageReplyTextModal(true)}> مشاهده </button>
+                            </td>
+                            <td className='w-9 sm:w-12 lg:w-16 xl:w-20'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showRemoveMessageReplyAlert}> حذف </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className='w-12 md:w-14 text-xs text-white'>3</td>
+                            <td className='line-clamp-2 w-52 sm:w-72 md:w-80 ipad:w-80 xl:w-[450px]'>
+                                هادی حیدری آذر
+                            </td>
+                            <td className='w-10 sm:w-12 lg:w-16 xl:w-20'>
+                                <button className='bg-blue-500 hover:bg-blue-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowMessageModal(true)}> مشاهده </button>
+                            </td>
+                            <td className='w-10 sm:w-12 lg:w-16 xl:w-20'>
+                                <button className='bg-green-500 hover:bg-green-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={() => setShowMessageReplyTextModal(true)}> مشاهده </button>
+                            </td>
+                            <td className='w-9 sm:w-12 lg:w-16 xl:w-20'>
+                                <button className='bg-rose-500 hover:bg-rose-600 text-white text-xs font-dana-medium px-1 sm:px-2 py-1 sm:py-1.5 rounded transition-colors' onClick={showRemoveMessageReplyAlert}> حذف </button>
+                            </td>
+                        </tr>
+                    </DataTable>
+                </AdminPanelTableTitle>
+
+                <Modal
+                    showModalState={showMessageReplyTextModal}
+                    setShowModalState={setShowMessageReplyTextModal}
+                    title='متن پاسخ'
+                >
+                    <div className='space-y-4'>
+                        <div className='min-h-max max-h-60 overflow-y-auto'>
+                            <p>
+                                سلام
+                                <br />
+                                ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم. می‌پنداریم که نظر مردم ایران و منطقه باید نسبت به کالای ایرانی بهبود یابد و در این راستا با اشتیاق می‌کوشیم.
+                            </p>
+                        </div>
+                        <button className='w-full bg-green-500 hover:bg-green-600 text-white p-1 rounded transition-colors' onClick={() => setShowMessageReplyTextModal(false)}> مشاهده کردم </button>
                     </div>
                 </Modal>
             </section>
