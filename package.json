@@ -11,6 +11,8 @@
     "tailwind": "npx tailwindcss -i ./src/index.css -o ./src/style/app.css --watch"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^42.0.0",
+    "@ckeditor/ckeditor5-react": "^8.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
