@@ -148,19 +148,21 @@ export default function Categories() {
                         setShowModalState={setShowEditCategoryModal}
                         title='ویرایش دسته بندی'
                     >
-                        <form onSubmit={event => event.preventDefault()} className='grid items-center grid-cols-1 gap-4'>
-                            <div className='space-y-1'>
-                                <label htmlFor='category-new-title' className='font-morabba-medium'> عنوان جدید </label>
-                                <input type='text' id='category-new-title' placeholder='عنوان جدید را وارد کنید...' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm" />
-                            </div>
-                            <div className='space-y-1'>
-                                <label htmlFor='category-new-short-name' className='font-morabba-medium'> اسم کوتاه جدید </label>
-                                <input type='text' id='category-new-short-name' placeholder='اسم کوتاه جدید را وارد کنید...' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm" />
-                            </div>
-                            <div className='space-y-1'>
-                                <label htmlFor='category-new-image' className='font-morabba-medium'> تصویر </label>
-                                <input type='file' id='category-new-image' accept='image/*' className='w-full bg-blue-200/35 p-2 rounded-md focus:outline-none dark:text-white border text-sm' />
-                                <img src='/public/images/categories/category5.png' className='w-24' />
+                        <form onSubmit={event => event.preventDefault()}>
+                            <div className='max-h-96 h-max overflow-y-auto grid items-center grid-cols-1 gap-4 mb-3'>
+                                <div className='space-y-1'>
+                                    <label htmlFor='category-new-title' className='font-morabba-medium'> عنوان جدید </label>
+                                    <input type='text' id='category-new-title' placeholder='عنوان جدید را وارد کنید...' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm" />
+                                </div>
+                                <div className='space-y-1'>
+                                    <label htmlFor='category-new-short-name' className='font-morabba-medium'> اسم کوتاه جدید </label>
+                                    <input type='text' id='category-new-short-name' placeholder='اسم کوتاه جدید را وارد کنید...' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm" />
+                                </div>
+                                <div className='space-y-1'>
+                                    <label htmlFor='category-new-image' className='font-morabba-medium'> تصویر </label>
+                                    <input type='file' id='category-new-image' accept='image/*' className='w-full bg-blue-200/35 p-2 rounded-md focus:outline-none dark:text-white border text-sm' />
+                                    <img src='/public/images/categories/category5.png' className='w-24' />
+                                </div>
                             </div>
                             <div className='flex items-center gap-2 child:w-full child:h-9 child:p-1 child:rounded child:text-white child:transition-colors'>
                                 <button className='bg-green-500 hover:bg-green-600' onClick={showEditCategoryAlert}> تغییر اطلاعات </button>

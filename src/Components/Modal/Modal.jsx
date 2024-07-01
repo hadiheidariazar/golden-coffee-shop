@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-export default function Modal({ showModalState, setShowModalState, title, children }) {
+export default function Modal({ showModalState, setShowModalState, title, children, moldaWidth }) {
 
     useEffect(() => {
         showModalState ? document.body.classList.add('overflow-y-hidden') : document.body.classList.remove('overflow-y-hidden')
@@ -10,7 +10,7 @@ export default function Modal({ showModalState, setShowModalState, title, childr
         <div className={`fixed flex justify-center items-center inset-0 min-h-screen z-50 ${showModalState ? "visible opacity-100" : "invisible opacity-0"}`}>
             <div className={`overlay h-full flex justify-center items-center transition-all z-20 ${showModalState ? "overlay-open" : "invisible opacity-0"}`} onClick={() => setShowModalState(false)}>
             </div>
-            <div className={`modal w-[96%] xs:w-[450px] mx-auto p-3 fixed bg-white dark:bg-zinc-700 z-30 transition-all ${showModalState ? "visible opacity-100" : "invisible opacity-0"}`}>
+            <div className={`modal w-[96%] ${moldaWidth ? moldaWidth : "xs:w-[450px]"} mx-auto p-3 fixed bg-white dark:bg-zinc-700 z-30 transition-all ${showModalState ? "visible opacity-100" : "invisible opacity-0"}`}>
                 <div className='flex justify-between items-center gap-x-2 pb-2 border-b-[1px] border-b-gray-300 dark:border-b-white/20'>
                     <h2 className='font-morabba-medium text-xl dark:text-white'> {title}</h2>
                     <div onClick={() => setShowModalState(false)}>

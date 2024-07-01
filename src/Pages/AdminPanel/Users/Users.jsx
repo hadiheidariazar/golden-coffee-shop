@@ -279,22 +279,24 @@ export default function Users() {
                     setShowModalState={setShowEditUserModal}
                     title='ویرایش کاربر'
                 >
-                    <form onSubmit={event => event.preventDefault()} className='grid items-center grid-cols-1 gap-4'>
-                        <div className='space-y-1'>
-                            <label htmlFor='user-new-name' className='font-morabba-medium'> نام جدید </label>
-                            <input type='text' id='user-new-name' placeholder='نام جدید را وارد کنید...' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm" />
-                        </div>
-                        <div className='space-y-1'>
-                            <label htmlFor='user-new-username' className='font-morabba-medium'> نام کاربری جدید </label>
-                            <input type='text' id='user-new-username' placeholder='نام کاربری جدید را وارد کنید...' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm" />
-                        </div>
-                        <div className='space-y-1'>
-                            <label htmlFor='user-new-tel' className='font-morabba-medium'> شماره تماس جدید </label>
-                            <input type='tel' id='user-new-tel' placeholder='...شماره تماس جدید را وارد کنید' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm text-right" />
-                        </div>
-                        <div className='space-y-1'>
-                            <label htmlFor='user-new-email' className='font-morabba-medium'> ایمیل جدید </label>
-                            <input type='email' id='user-new-email' placeholder='ایمیل جدید را وارد کنید...' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm" />
+                    <form onSubmit={event => event.preventDefault()}>
+                        <div className='max-h-96 h-max overflow-y-auto grid items-center grid-cols-1 gap-4 mb-3'>
+                            <div className='space-y-1'>
+                                <label htmlFor='user-new-name' className='font-morabba-medium'> نام جدید </label>
+                                <input type='text' id='user-new-name' placeholder='نام جدید را وارد کنید...' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm" />
+                            </div>
+                            <div className='space-y-1'>
+                                <label htmlFor='user-new-username' className='font-morabba-medium'> نام کاربری جدید </label>
+                                <input type='text' id='user-new-username' placeholder='نام کاربری جدید را وارد کنید...' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm" />
+                            </div>
+                            <div className='space-y-1'>
+                                <label htmlFor='user-new-tel' className='font-morabba-medium'> شماره تماس جدید </label>
+                                <input type='tel' id='user-new-tel' placeholder='...شماره تماس جدید را وارد کنید' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm text-right" />
+                            </div>
+                            <div className='space-y-1'>
+                                <label htmlFor='user-new-email' className='font-morabba-medium'> ایمیل جدید </label>
+                                <input type='email' id='user-new-email' placeholder='ایمیل جدید را وارد کنید...' className="w-full bg-blue-200/35 p-2 rounded-md focus:outline-none border placeholder:text-gray-500 dark:placeholder:text-gray-300/80 dark:text-white text-sm" />
+                            </div>
                         </div>
                         <div className='flex items-center gap-2 child:w-full child:h-9 child:p-1 child:rounded child:text-white child:transition-colors'>
                             <button className='bg-green-500 hover:bg-green-600' onClick={showEditUserAlert}> تغییر اطلاعات </button>
