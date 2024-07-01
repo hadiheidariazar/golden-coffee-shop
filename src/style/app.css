@@ -1423,6 +1423,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   width: 60px;
 }
 
+.w-\[69px\] {
+  width: 69px;
+}
+
 .w-\[85\%\] {
   width: 85%;
 }
@@ -1466,22 +1470,6 @@ table tbody tr:not(:first-child):is(.dark *) {
 
 .w-px {
   width: 1px;
-}
-
-.w-\[70px\] {
-  width: 70px;
-}
-
-.w-\[65px\] {
-  width: 65px;
-}
-
-.w-\[68px\] {
-  width: 68px;
-}
-
-.w-\[69px\] {
-  width: 69px;
 }
 
 .min-w-27 {
@@ -2971,6 +2959,12 @@ table tbody tr:not(:first-child):is(.dark *) {
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
+.child\:space-y-1 > * > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
 .child\:rounded > * {
   border-radius: 0.25rem;
 }
@@ -3156,6 +3150,10 @@ table tbody tr:not(:first-child):is(.dark *) {
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
+.dark\:bg-gray-500\/50:is(.dark *) {
+  background-color: rgb(107 114 128 / 0.5);
+}
+
 .dark\:bg-green-200:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(187 247 208 / var(--tw-bg-opacity));
@@ -3205,6 +3203,97 @@ table tbody tr:not(:first-child):is(.dark *) {
 .dark\:bg-zinc-800:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-gray-600\/50:is(.dark *) {
+  background-color: rgb(75 85 99 / 0.5);
+}
+
+.dark\:bg-gray-800\/50:is(.dark *) {
+  background-color: rgb(31 41 55 / 0.5);
+}
+
+.dark\:bg-gray-400\/50:is(.dark *) {
+  background-color: rgb(156 163 175 / 0.5);
+}
+
+.dark\:bg-gray-400\/60:is(.dark *) {
+  background-color: rgb(156 163 175 / 0.6);
+}
+
+.dark\:bg-gray-500\/60:is(.dark *) {
+  background-color: rgb(107 114 128 / 0.6);
+}
+
+.dark\:bg-gray-500\/70:is(.dark *) {
+  background-color: rgb(107 114 128 / 0.7);
+}
+
+.dark\:bg-gray-500\/80:is(.dark *) {
+  background-color: rgb(107 114 128 / 0.8);
+}
+
+.dark\:bg-gray-500\/0:is(.dark *) {
+  background-color: rgb(107 114 128 / 0);
+}
+
+.dark\:bg-slate-500\/60:is(.dark *) {
+  background-color: rgb(100 116 139 / 0.6);
+}
+
+.dark\:bg-slate-500\/50:is(.dark *) {
+  background-color: rgb(100 116 139 / 0.5);
+}
+
+.dark\:bg-slate-500\/70:is(.dark *) {
+  background-color: rgb(100 116 139 / 0.7);
+}
+
+.dark\:bg-slate-500\/80:is(.dark *) {
+  background-color: rgb(100 116 139 / 0.8);
+}
+
+.dark\:bg-slate-500\/90:is(.dark *) {
+  background-color: rgb(100 116 139 / 0.9);
+}
+
+.dark\:bg-slate-500:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-slate-400:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-slate-600:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-slate-400\/50:is(.dark *) {
+  background-color: rgb(148 163 184 / 0.5);
+}
+
+.dark\:bg-slate-400\/60:is(.dark *) {
+  background-color: rgb(148 163 184 / 0.6);
+}
+
+.dark\:bg-slate-400\/70:is(.dark *) {
+  background-color: rgb(148 163 184 / 0.7);
+}
+
+.dark\:bg-slate-400\/40:is(.dark *) {
+  background-color: rgb(148 163 184 / 0.4);
+}
+
+.dark\:bg-slate-500\/85:is(.dark *) {
+  background-color: rgb(100 116 139 / 0.85);
+}
+
+.dark\:bg-slate-500\/75:is(.dark *) {
+  background-color: rgb(100 116 139 / 0.75);
 }
 
 .dark\:fill-white:is(.dark *) {
@@ -3436,6 +3525,10 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .xs\:mt-5 {
     margin-top: 1.25rem;
+  }
+
+  .xs\:block {
+    display: block;
   }
 
   .xs\:aspect-\[2\/1\] {
@@ -3753,6 +3846,18 @@ table tbody tr:not(:first-child):is(.dark *) {
     -webkit-line-clamp: 3;
   }
 
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:inline-block {
+    display: inline-block;
+  }
+
+  .sm\:inline {
+    display: inline;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -3785,10 +3890,6 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 3rem;
   }
 
-  .sm\:w-14 {
-    width: 3.5rem;
-  }
-
   .sm\:w-20 {
     width: 5rem;
   }
@@ -3817,6 +3918,10 @@ table tbody tr:not(:first-child):is(.dark *) {
     width: 16rem;
   }
 
+  .sm\:w-7 {
+    width: 1.75rem;
+  }
+
   .sm\:w-72 {
     width: 18rem;
   }
@@ -3843,18 +3948,6 @@ table tbody tr:not(:first-child):is(.dark *) {
 
   .sm\:w-px {
     width: 1px;
-  }
-
-  .sm\:w-7 {
-    width: 1.75rem;
-  }
-
-  .sm\:w-11 {
-    width: 2.75rem;
-  }
-
-  .sm\:w-1 {
-    width: 0.25rem;
   }
 
   .sm\:max-w-64 {

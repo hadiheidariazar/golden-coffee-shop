@@ -149,7 +149,7 @@ export default function Users() {
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div className='flex sm:block'>
                             <br className='invisible' />
                             <button className='w-max py-1 px-2 h-8 rounded bg-green-500 text-white hover:bg-green-600 transition-colors' onClick={showAddNewUserAlert}> افزودن </button>
                         </div>

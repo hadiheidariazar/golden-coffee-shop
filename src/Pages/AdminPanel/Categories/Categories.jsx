@@ -65,7 +65,7 @@ export default function Categories() {
                             <label htmlFor='category-image' className='font-morabba-medium'> تصویر </label>
                             <input type='file' id='category-image' accept='image/*' className='w-full bg-blue-200/35 p-2 rounded-md focus:outline-none dark:text-white border text-sm' />
                         </div>
-                        <div>
+                        <div className='flex sm:block'>
                             <br className='invisible' />
                             <button className='w-max py-1 px-2 h-8 rounded bg-green-500 text-white hover:bg-green-600 transition-colors' onClick={showAddCategoryAlert}> افزودن </button>
                         </div>
