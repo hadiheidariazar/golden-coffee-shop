@@ -15,6 +15,11 @@
     flex-wrap: wrap !important;
 }
 
+.ck {
+    background: #bfdbfe18 !important;
+    color: inherit !important;
+}
+
 @media screen and (max-width: 600px) {
     .ck-reset_all :not(.ck-reset_all-excluded *),
     .ck.ck-reset_all {
