@@ -1,27 +1,41 @@
 <!doctype html>
 <html lang="en" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/images/svgs/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content='گلدن کافی یک کافی شاپ اینترنتی و فروش انواع قهوه است که شما میتوانید با خیال راحت خرید کنید'>
-    <title>کافی شاپ اینترنتی گلدن کافی </title>
-    <link rel="stylesheet" href="./node_modules/swiper/swiper.css">
-    <script>
-      if (localStorage.getItem('theme')) {
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark')
-        } else {
-        }
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
-    </script>
-  </head>
-  <body class="font-dana bg-gray-100 dark:bg-zinc-800">
 
-    <div id="root"></div>
-    
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/images/svgs/logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords"
+    content='گلدن کافی یک کافی شاپ اینترنتی و فروش انواع قهوه است که شما میتوانید با خیال راحت خرید کنید'>
+  <title>کافی شاپ اینترنتی گلدن کافی </title>
+  <link rel="stylesheet" href="./node_modules/swiper/swiper.css">
+  <script>
+    if (localStorage.getItem('theme')) {
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+      }
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+
+<body class="font-dana bg-gray-100 dark:bg-zinc-800 overflow-hidden">
+
+  <div class="spinner flex justify-center items-center fixed inset-0 w-full h-screen dark:bg-zinc-800 bg-white first-z">
+    <div class="loader w-10 aspect-[1] text-orange-400 relative"></div>
+  </div>
+
+  <div id="root"></div>
+
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    window.addEventListener('load', () => {
+      document.body.classList.remove('overflow-hidden')
+      document.querySelector('.spinner').classList.add('hidden')
+    })
+  </script>
+</body>
+
 </html>
