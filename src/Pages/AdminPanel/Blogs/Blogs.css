@@ -1,0 +1,23 @@
+:root {
+    --line-height-small: 1.2;
+    --font-size-small: 0.95em;
+    --font-face: Helvetica, Arial, Tahoma, Verdana, Sans-Serif;
+}
+
+.ck-toolbar__items,
+.ck-content p {
+    direction: rtl !important;
+    text-align: right;
+}
+
+.ck-toolbar__items {
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+@media screen and (max-width: 600px) {
+    .ck-reset_all :not(.ck-reset_all-excluded *),
+    .ck.ck-reset_all {
+        font: normal normal normal var(--font-size-small)/var(--line-height-small) var(--font-face) !important;
+    }
+}
