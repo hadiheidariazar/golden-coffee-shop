@@ -5,7 +5,7 @@
 ## About Project
 An online coffee shop website for selling all kinds of coffees
 
-### See <a href='https://goldencoffee.liara.run'>Demo</a>
+### See <a href='https://goldencoffeeshop.vercel.app'>Demo</a>
 
 ## Getting Started
 First, run the development server
